@@ -5,6 +5,8 @@ import Rectangle from '../../../../core/components/Rectangle';
 import Logo from '../../../../core/assets/logo1.png'
 import imgInfo from '../../../../core/assets/moreinfo.png'
 
+import Button from '../../../../core/components/Button';
+import About from '../About';
 
 import {
     Container,
@@ -15,7 +17,7 @@ import {
     ContentImage,
     RectangleImage,
 } from './styles';
-import Button from '../../../../core/components/Button';
+
 
 const Header = () => {
 
@@ -63,8 +65,7 @@ const Header = () => {
                     <Rectangle />
 
                 </ContentImage>
-
-            </ContentHeader>
+            </ContentHeader>       
         </Container>
         
     )

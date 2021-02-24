@@ -8,10 +8,8 @@ export const Container = styled.div`
             rgba(247, 247, 249, 0) 64.63%
         );
 
-    height: 100vh;
+    height: 80vh;
     width: 100%;
-
-    overflow: hidden;
 
 `;
 
@@ -82,18 +80,21 @@ export const MoreInfo = styled.div`
 
 export const ContentHeader = styled.div`
     width: 100%;
-    height: 100vh;
 
     display: flex;
+    flex: 1;
 
-
+    position: relative;
 
 
 `;
 
 export const ContentText = styled.div`
-    width: 50%;
-    margin: 0 200px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: 0 200px;
 
 
     >h1 {
@@ -139,16 +140,17 @@ export const ContentText = styled.div`
         }
         
     }
+
 `;
 
 export const ContentImage = styled.div`
-    height: 100%;
-    width: 100%;
+    display: flex;
+    flex: 2;
 
-    margin-top: 100px;
-    margin-left: 100px;
+    position: absolute;
 
-    position: relative;
+    top: 10%;
+    left: 60%;
 
     > :first-child {
         border: ${props => props.theme.colors.secondary} 1px solid;
@@ -186,7 +188,6 @@ export const RectangleImage = styled.div`
     transform: rotate(45deg);
     
     z-index: 1;
-    
 
     position: relative;
 
@@ -199,8 +200,8 @@ export const RectangleImage = styled.div`
     &::before {
         content: "";
         position: absolute;
-        width: 1000px;
-        height: 1000px;
+        width: 200%;
+        height: 200%;
         top: -60%;
         left: -8%;
         z-index: 1;
