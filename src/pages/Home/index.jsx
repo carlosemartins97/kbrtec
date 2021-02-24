@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './components/About';
 import Divisor from './components/Divisor';
+import FirstInfo from './components/FirstInfo';
 
 import Header from './components/Header';
 
@@ -16,7 +17,9 @@ const Home = () => {
     return (
         <Container>
             <Header />
+
             <About />
+
             <Divisor>
                 <ImageArea>
                     <img src={Logo} alt="Logo da empresa"/>
@@ -37,6 +40,8 @@ const Home = () => {
                     </p>
                 </TextArea>
             </Divisor>
+
+            <FirstInfo />
         </Container>
         
     )
