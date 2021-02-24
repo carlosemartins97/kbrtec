@@ -12,6 +12,7 @@ import {
     ImageArea,
     TextArea,
 } from './styles';
+import YearsInfo from './components/YearsInfo';
 
 const Home = () => {
     return (
@@ -42,6 +43,9 @@ const Home = () => {
             </Divisor>
 
             <FirstInfo />
+
+            <YearsInfo />
+
         </Container>
         
     )

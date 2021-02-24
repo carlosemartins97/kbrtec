@@ -6,7 +6,6 @@ import Logo from '../../../../core/assets/logo1.png'
 import imgInfo from '../../../../core/assets/moreinfo.png'
 
 import Button from '../../../../core/components/Button';
-import About from '../About';
 
 import {
     Container,
@@ -25,11 +24,11 @@ const Header = () => {
         <Container>
             <NavHeader>
                 <Rectangle >
-                    <a href="#"><img src={Logo} alt="Logo da empresa"/></a>
+                    <a href="/"><img src={Logo} alt="Logo da empresa"/></a>
                 </Rectangle>
 
                 <MoreInfo>
-                    <Button href="links">
+                    <Button href="/">
                         Mais informações
                     </Button>
 
@@ -53,7 +52,7 @@ const Header = () => {
 
                     </p>
 
-                    <Button href="#"> 
+                    <Button href="/"> 
                         Lorem ipsum idolor
                     </Button>
                 </ContentText>
