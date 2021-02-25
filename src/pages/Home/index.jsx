@@ -11,9 +11,7 @@ import SecondDivider from './components/SecondDivider';
 import RegistrationSteps from './components/RegistrationSteps';
 import VersionDetails from './components/VersionDetails';
 import PriceDetails from './components/PriceDetails';
-
-
-
+import FeedbackAndPartners from './components/FeedbackAndPartners';
 
 import {
     Container,
@@ -43,6 +41,8 @@ const Home = () => {
             <VersionDetails />
 
             <PriceDetails />
+
+            <FeedbackAndPartners />
 
         </Container>
         
