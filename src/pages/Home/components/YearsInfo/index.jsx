@@ -59,20 +59,20 @@ const YearsInfo = () => {
                     <List>
                         
                         {
-                        yearsData.map(item => {
-                            return (
-                                <ListItem key={item.year}>
-                                    <ListContent>
-                                        <span>...</span>
-                                        <p>{item.year}</p>
-                                        <InfoListItem>
-                                            <small>{item.description}</small>
-                                            <span>{item.price}</span>
-                                        </InfoListItem>
-                                    </ListContent>
-                                </ListItem>
-                            )
-                        })
+                            yearsData.map(item => {
+                                return (
+                                    <ListItem key={item.year}>
+                                        <ListContent>
+                                            <span>...</span>
+                                            <p>{item.year}</p>
+                                            <InfoListItem>
+                                                <small>{item.description}</small>
+                                                <span>{item.price}</span>
+                                            </InfoListItem>
+                                        </ListContent>
+                                    </ListItem>
+                                )
+                            })
                         }
                     </List>
 
