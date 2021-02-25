@@ -15,6 +15,7 @@ import SecondDivider from './components/SecondDivider';
 import {
     Container,
 } from './styles';
+import RegistrationSteps from './components/RegistrationSteps';
 
 
 
@@ -34,6 +35,8 @@ const Home = () => {
             <SecondInfo />
 
             <SecondDivider />
+
+            <RegistrationSteps />
 
         </Container>
         
