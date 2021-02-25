@@ -11,12 +11,8 @@ import {
     FormationTitle,
     FormationPrice,
     FormationSubtitle,
-    CallToActionButtons,
-    FirstOfferButton,
-    SecondOfferButton,
-    OfferText,
-    OfferPrice,
 } from './styles';
+import CallToActionButtons from './CallToActionButtons';
 
 const Details = () => {
 
@@ -54,20 +50,7 @@ const Details = () => {
             }
             </FormationContainer>
 
-            <CallToActionButtons>
-
-                <FirstOfferButton>
-                    <OfferText>Lorem Ipsum has been the industry's</OfferText>
-                    <OfferPrice>R$24.997,00</OfferPrice>
-                </FirstOfferButton>
-
-                <SecondOfferButton>
-                    <small>ou</small>
-                    <OfferPrice>R$24.997,00</OfferPrice>
-                    <OfferText>Ipsum has been the industry's standard dummy text ever since the 15000.</OfferText>
-                </SecondOfferButton>
-
-            </CallToActionButtons>
+            <CallToActionButtons />
 
         </Container>
     )
