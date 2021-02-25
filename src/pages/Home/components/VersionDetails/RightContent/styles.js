@@ -18,7 +18,7 @@ export const Container = styled.div`
 export const ContentSubtitle = styled.h3`
     width: 400px;
 
-    padding: 40px 0;
+    padding: 20px 0;
 
     font-family: 'Oswald';
     font-size: 18px;
@@ -48,7 +48,6 @@ export const ContentList = styled.ul`
     font-size: 15px;
     line-height: 287%;
 
-    padding-top: 40px;
     padding-bottom: 20px;
 `;
 
