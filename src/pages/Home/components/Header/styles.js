@@ -76,6 +76,13 @@ export const MoreInfo = styled.div`
     >img {
         margin-left: 70px;
     }
+
+    > a {
+        background: linear-gradient(
+            ${props => props.theme.colors.gradient.secondary}, 
+            ${props => props.theme.colors.gradient.primary}
+        );
+    }
 `;
 
 export const ContentHeader = styled.div`
