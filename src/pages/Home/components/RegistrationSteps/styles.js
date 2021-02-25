@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     margin-bottom: 150px;
+
+    padding: 0 20px;
 `;
 export const ContentTitle = styled.h2`
     font-family: 'Oswald';

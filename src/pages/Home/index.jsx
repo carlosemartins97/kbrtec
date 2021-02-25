@@ -16,6 +16,7 @@ import {
     Container,
 } from './styles';
 import RegistrationSteps from './components/RegistrationSteps';
+import VersionDetails from './components/VersionDetails';
 
 
 
@@ -37,6 +38,8 @@ const Home = () => {
             <SecondDivider />
 
             <RegistrationSteps />
+
+            <VersionDetails />
 
         </Container>
         

@@ -14,8 +14,6 @@ const theme = {
         black: "#000",
         gray: "rgb(237,237,237)",
 
-        info: '',
-        success: '',
         warning: '	#cc3300',
     }
 };

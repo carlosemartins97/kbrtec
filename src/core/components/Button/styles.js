@@ -18,7 +18,11 @@ export const Container = styled.a`
     border-radius: 30px;
     
     padding: 0 20px;
-
+    
+    &:hover {
+            transition: opacity 0.3s;
+            opacity: .5;
+        }
 
 
 `;

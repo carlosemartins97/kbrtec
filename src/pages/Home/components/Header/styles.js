@@ -133,11 +133,7 @@ export const ContentText = styled.div`
         background: ${props => props.theme.colors.secondary};
 
         height: 60px;
-        
-        &:hover {
-            transition: opacity 0.3s;
-            opacity: .5;
-        }
+
         
     }
 
