@@ -13,6 +13,7 @@ import {
     TextArea,
 } from './styles';
 import YearsInfo from './components/YearsInfo';
+import SecondInfo from './components/SecondInfo';
 
 const Home = () => {
     return (
@@ -45,6 +46,8 @@ const Home = () => {
             <FirstInfo />
 
             <YearsInfo />
+
+            <SecondInfo />
 
         </Container>
         
