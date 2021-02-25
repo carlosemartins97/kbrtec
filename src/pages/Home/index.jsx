@@ -8,6 +8,9 @@ import YearsInfo from './components/YearsInfo';
 import SecondInfo from './components/SecondInfo';
 import FirstDivider from './components/FirstDivider';
 import SecondDivider from './components/SecondDivider';
+import RegistrationSteps from './components/RegistrationSteps';
+import VersionDetails from './components/VersionDetails';
+import PriceDetails from './components/PriceDetails';
 
 
 
@@ -15,8 +18,6 @@ import SecondDivider from './components/SecondDivider';
 import {
     Container,
 } from './styles';
-import RegistrationSteps from './components/RegistrationSteps';
-import VersionDetails from './components/VersionDetails';
 
 
 
@@ -40,6 +41,8 @@ const Home = () => {
             <RegistrationSteps />
 
             <VersionDetails />
+
+            <PriceDetails />
 
         </Container>
         
