@@ -14,6 +14,8 @@ export const Container = styled.header`
 `;
 
 export const NavHeader = styled.div`
+    z-index: 3;
+
     display: flex;
     justify-content: space-between;
 
@@ -89,19 +91,18 @@ export const ContentHeader = styled.div`
     width: 100%;
 
     display: flex;
+    align-items: center;
     flex: 1;
 
-    position: relative;
-
-
+    margin-top: 100px;
 `;
 
 export const ContentText = styled.div`
     display: flex;
-    flex: 1;
+    align-items: center;
+    width: 100%;
     flex-direction: column;
 
-    padding: 0 200px;
 
 
     >h1 {
@@ -148,43 +149,17 @@ export const ContentText = styled.div`
 
 export const ContentImage = styled.div`
     display: flex;
-    flex: 2;
+    justify-content: center;
 
-    position: absolute;
+    width: 100%;
+    height: 420px;
 
-    top: 10%;
-    left: 60%;
+    position: relative;
 
-    > :first-child {
-        border: ${props => props.theme.colors.secondary} 1px solid;
-        background: unset;
+`;
 
-        position: absolute;
-        z-index: 2;
-        top: 0%;
-        left: 8%;
+export const Main = styled.div`
 
-        width: 450px;
-        height: 450px;
-
-        border-radius: 57px;
-    }
-    > :last-child {
-        background: linear-gradient(190deg,
-            ${props => props.theme.colors.gradient.primary}, 
-            ${props => props.theme.colors.white}
-        );
-        
-        position: absolute;
-        z-index: 0;
-        top: 0%;
-        left: -8%;
-
-        width: 450px;
-        height: 450px;
-
-        border-radius: 57px;
-    }
 `;
 
 export const RectangleImage = styled.div`
@@ -192,7 +167,9 @@ export const RectangleImage = styled.div`
     
     z-index: 1;
 
-    position: relative;
+    position: absolute;
+
+    left: 30%;
 
     width: 450px;
     height: 450px;
@@ -210,6 +187,41 @@ export const RectangleImage = styled.div`
         z-index: 1;
         background: url(${headerImg}) 0 0 repeat;
         transform: rotate(-45deg);
+    }
+`;
+
+export const RectangleBackgrounds = styled.div`
+
+    > :first-child {
+        border: ${props => props.theme.colors.secondary} 1px solid;
+        background: unset;
+
+        position: absolute;
+        z-index: 2;
+
+        left: 40%;
+
+        width: 450px;
+        height: 450px;
+
+        border-radius: 57px;
+    }
+
+    > :last-child {
+        background: linear-gradient(190deg,
+            ${props => props.theme.colors.gradient.primary}, 
+            ${props => props.theme.colors.white}
+        );
+        
+        position: absolute;
+        z-index: 0;
+        top: 0%;
+        left: 20%;
+
+        width: 450px;
+        height: 450px;
+
+        border-radius: 57px;
     }
 `;
 

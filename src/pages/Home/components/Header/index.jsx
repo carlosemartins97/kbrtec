@@ -14,7 +14,9 @@ import {
     ContentHeader,
     ContentText,
     ContentImage,
+    Main,
     RectangleImage,
+    RectangleBackgrounds,
 } from './styles';
 
 
@@ -22,6 +24,7 @@ const Header = () => {
 
     return (
         <Container>
+
             <NavHeader>
                 <Rectangle >
                     <a href="/"><img src={Logo} alt="Logo da empresa"/></a>
@@ -35,7 +38,9 @@ const Header = () => {
                     <img src={imgInfo} alt=""/>
                 </MoreInfo>
             </NavHeader>
+
             <ContentHeader>
+
                 <ContentText>
                     <h1>
                         standard Lorem Ipsum <br/>
@@ -59,11 +64,18 @@ const Header = () => {
 
                 <ContentImage>
 
-                    <Rectangle /> 
-                    <RectangleImage/>
-                    <Rectangle />
+                    <Main>
+                        <RectangleImage/>
+                        <RectangleBackgrounds>
+
+                            <Rectangle /> 
+                            <Rectangle />
+                            
+                        </RectangleBackgrounds>
+                    </Main>
 
                 </ContentImage>
+
             </ContentHeader>       
         </Container>
         
