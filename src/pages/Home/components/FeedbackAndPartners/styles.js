@@ -9,6 +9,9 @@ export const Container = styled.section`
     p {
         padding: 30px 0;
     }
+    @media(max-width: 770px){
+        flex-direction: column;
+    }
 `;
 
 export const Feedback = styled.div`
@@ -20,6 +23,11 @@ export const Feedback = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @media(max-width: 1465px){
+        padding: 0 20px;
+        justify-content: center;
+    }
 `;
 
 export const Partners = styled.div`
@@ -35,10 +43,15 @@ export const Partners = styled.div`
     h2, p {
         color: ${props => props.theme.colors.black};
     }
+
+    @media(max-width: 1465px){
+        padding: 0 20px;
+        justify-content: center;
+    }
 `;
 
 export const Content = styled.div`
-    width: 500px;
+    max-width: 500px;
     height: 100%;
 
     display: flex;
@@ -54,6 +67,10 @@ export const Title = styled.h2`
     line-height: 37px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+
+    @media(max-width: 770px){
+        text-align: center;
+    }
 `;
 
 
@@ -68,9 +85,16 @@ export const Description = styled.p`
 `;
 
 export const VideoArea = styled.div`
+    display: flex;
+    flex-direction:  column;
+    justify-content: space-around;
+    
     > img {
         padding: 10px 0;
     }
+    @media(max-width: 1465px){
+            text-align:center;
+        }
 `;
 
 export const PartnersArea = styled.div`
@@ -79,6 +103,11 @@ export const PartnersArea = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 100px;
     grid-column-gap: 50px;
+
+    @media(max-width: 1465px){
+        grid-template-columns: repeat(2, 1fr);
+        justify-items:center;
+    }
 
 `;
 
