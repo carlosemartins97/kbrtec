@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    margin-bottom: 150px;
-
-    padding: 0 20px;
+    padding: 100px 50px;
 `;
 export const ContentTitle = styled.h2`
     font-family: 'Oswald';
@@ -13,12 +11,20 @@ export const ContentTitle = styled.h2`
     text-transform: uppercase;
     text-align: center;
 
-    margin-top: 100px;
 `;
 export const ContentSteps = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    @media(max-width: 770px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media(max-width: 550px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: 500px){
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 export const Step = styled.div`
     display: flex;
@@ -26,7 +32,7 @@ export const Step = styled.div`
     align-items: center;
     justify-content: center;
 
-    width: 200px;
+    width: 180px;
 
     margin-top: 100px;
 
