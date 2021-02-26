@@ -29,4 +29,22 @@ export const IframeTag = styled.iframe`
     height: 650px;
 
     margin-bottom: 100px;
+
+    @media(max-width: 1024px){
+        width: 770px;
+        height: 435px;
+    }
+    @media(max-width: 770px){
+        width: 575px;
+        height: 325px;
+    }
+    @media(max-width: 550px){
+        width: 475px;
+        height: 275px;
+    }
+    @media(max-width: 500px){
+        width: 99%;
+        height: 250px;
+    }
+
 `;
