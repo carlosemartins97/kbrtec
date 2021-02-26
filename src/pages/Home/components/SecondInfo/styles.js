@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 
-export const Container = styled.div`
+export const Container = styled.section`
 margin-top: 100px;
 margin-bottom: 100px;
 `;
