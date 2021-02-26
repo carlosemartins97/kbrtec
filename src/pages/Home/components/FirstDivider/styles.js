@@ -19,7 +19,25 @@ export const ImageArea = styled.div`
         letter-spacing: 0.1em;
 
         text-transform: uppercase;
+    }
+
+    @media(max-width: 500px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 20px 0;
+
+        margin: unset;
+
+        > img {
+            width: 80px;
+            height: 100px;
         }
+        > h2{
+            margin: unset;
+        }
+    }
 `;
 
 export const TextArea = styled.div`
@@ -39,5 +57,9 @@ export const TextArea = styled.div`
         > span {
             color: ${props => props.theme.colors.secondary};
         }
+    }
+
+    @media(max-width: 500px){
+        padding: 20px;
     }
 `;

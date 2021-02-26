@@ -8,13 +8,8 @@ export const Container = styled.header`
             rgba(247, 247, 249, 0) 65%
         );
 
-    height: 80vh;
+    height: 100%;
     width: 100%;
-
-    @media(max-width: 570px){
-        justify-content: space-around;
-        padding: 10px 50px 0 50px;
-    }
 
 `;
 
@@ -22,7 +17,6 @@ export const NavHeader = styled.div`
     z-index: 3;
 
     display: flex;
-    justify-content: space-between;
 
     position: relative;
     
@@ -49,8 +43,7 @@ export const NavHeader = styled.div`
         > a {
             transform: rotate(45deg);
             display: flex;
-            flex: 1;
-
+            flex:1;
             > img {
                 position: absolute;
                 
@@ -62,23 +55,33 @@ export const NavHeader = styled.div`
         }
     }
     @media(max-width: 570px){
-        flex-direction: column;
-        justify-content: center;
+        justify-content:space-around;
         align-items: center;
 
         > :first-child {
             position: unset;
-            transform: rotate(0deg);
+
+
             display:flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            > a {
-                transform: rotate(0deg);
-                height: 100px;
+
+            margin: 20px 0;
+
+            width: 100px;
+            height: 100px;
+            a {
+                height: 100%;
                 align-items: center;
                 justify-content: center;
+                > img {
+                    position: unset;
+                    width: 60px;
+                    top: unset;
+                    right: unset;
+                }
             }
+            
         }
     }
 `;
@@ -93,6 +96,10 @@ export const MoreInfo = styled.div`
     
     > :first-child {
         color: ${props => props.theme.colors.secondary};
+        background: linear-gradient(
+            ${props => props.theme.colors.gradient.secondary}, 
+            ${props => props.theme.colors.gradient.primary}
+        );
 
         &:hover {
             transition: opacity 0.4s;
@@ -104,15 +111,10 @@ export const MoreInfo = styled.div`
         margin-left: 70px;
     }
 
-    > a {
-        background: linear-gradient(
-            ${props => props.theme.colors.gradient.secondary}, 
-            ${props => props.theme.colors.gradient.primary}
-        );
-    }
     @media(max-width: 570px){
         flex-direction: column;
-
+        flex: unset;
+        margin: 0;
         >:last-child {
             display: none;
         }
@@ -130,6 +132,8 @@ export const ContentHeader = styled.div`
 
     @media(max-width: 770px){
         flex-direction: column;
+        padding: 0 50px 10px 50px;
+        text-align: center;
     }
 `;
 
@@ -172,11 +176,7 @@ export const ContentText = styled.div`
         justify-content: center;
         align-items: center;
 
-        background: ${props => props.theme.colors.secondary};
-
-        height: 60px;
-
-        
+        background: ${props => props.theme.colors.secondary};    
     }
     @media(max-width: 500px){
         > h1 {
