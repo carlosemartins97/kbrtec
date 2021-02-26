@@ -12,6 +12,7 @@ import RegistrationSteps from './components/RegistrationSteps';
 import VersionDetails from './components/VersionDetails';
 import PriceDetails from './components/PriceDetails';
 import FeedbackAndPartners from './components/FeedbackAndPartners';
+import ProsAndCons from './components/ProsAndCons';
 
 import {
     Container,
@@ -43,6 +44,8 @@ const Home = () => {
             <PriceDetails />
 
             <FeedbackAndPartners />
+
+            <ProsAndCons />
 
         </Container>
         
