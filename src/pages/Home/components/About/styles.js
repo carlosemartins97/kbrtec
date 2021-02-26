@@ -4,6 +4,15 @@ export const Container = styled.section`
     margin-top: 100px;
     display: flex;
     justify-content: center;
+
+    padding: 10px;
+
+    @media(max-width: 770px){
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const ImgContainer = styled.div`
@@ -15,6 +24,11 @@ export const TextContainer = styled.div`
     margin-top: 20px;
     
     max-width: 600px;
+
+    @media(max-width: 770px){
+        margin: 0;
+        margin-bottom: 50px;
+    }
 `;
 
 export const Title = styled.h1`
@@ -77,5 +91,11 @@ export const Social = styled.div`
         margin: 0 10px;
 
         width: 40px;
+    }
+
+    @media(max-width: 770px){
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
     }
 `;

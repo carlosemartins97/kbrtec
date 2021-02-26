@@ -11,6 +11,11 @@ export const Container = styled.header`
     height: 80vh;
     width: 100%;
 
+    @media(max-width: 570px){
+        justify-content: space-around;
+        padding: 10px 50px 0 50px;
+    }
+
 `;
 
 export const NavHeader = styled.div`
@@ -56,6 +61,26 @@ export const NavHeader = styled.div`
             }
         }
     }
+    @media(max-width: 570px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        > :first-child {
+            position: unset;
+            transform: rotate(0deg);
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            > a {
+                transform: rotate(0deg);
+                height: 100px;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
 `;
 
 export const MoreInfo = styled.div`
@@ -85,6 +110,13 @@ export const MoreInfo = styled.div`
             ${props => props.theme.colors.gradient.primary}
         );
     }
+    @media(max-width: 570px){
+        flex-direction: column;
+
+        >:last-child {
+            display: none;
+        }
+    }
 `;
 
 export const ContentHeader = styled.div`
@@ -94,16 +126,18 @@ export const ContentHeader = styled.div`
     align-items: center;
     flex: 1;
 
-    margin-top: 100px;
+    padding: 100px 0;
+
+    @media(max-width: 770px){
+        flex-direction: column;
+    }
 `;
 
 export const ContentText = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    flex-direction: column;
-
-
 
     >h1 {
         font-family: 'Oswald';
@@ -144,7 +178,14 @@ export const ContentText = styled.div`
 
         
     }
-
+    @media(max-width: 500px){
+        > h1 {
+            font-size: 23px;
+        }
+        > a {
+            width: 100%;
+        }
+    }
 `;
 
 export const ContentImage = styled.div`
@@ -155,6 +196,10 @@ export const ContentImage = styled.div`
     height: 420px;
 
     position: relative;
+
+    @media(max-width: 900px){
+        display: none;
+    }
 
 `;
 
