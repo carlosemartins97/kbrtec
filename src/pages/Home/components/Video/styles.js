@@ -10,7 +10,8 @@ export const Container = styled.section`
 `;
 
 export const ContentTitle = styled.h2`
-    width: 670px;
+    max-width: 670px;
+    padding: 0 15px;
 
     margin: 100px 0;
 
@@ -22,6 +23,10 @@ export const ContentTitle = styled.h2`
     text-transform: uppercase;
 
     color: ${props => props.theme.colors.white};
+    @media(max-width: 550px){
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
 `;
 
 export const IframeTag = styled.iframe`
@@ -37,10 +42,12 @@ export const IframeTag = styled.iframe`
     @media(max-width: 770px){
         width: 575px;
         height: 325px;
+        
     }
     @media(max-width: 550px){
         width: 475px;
         height: 275px;
+        margin-bottom: 50px;
     }
     @media(max-width: 500px){
         width: 99%;

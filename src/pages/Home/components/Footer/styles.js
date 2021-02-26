@@ -19,6 +19,11 @@ export const Content = styled.div`
     justify-content: space-between;
 
     width: 1155px;
+
+    @media(max-width: 1024px){
+        flex-direction: column;
+        padding: 0 20px;
+    }
 `;
 
 export const Address = styled.div`
@@ -33,6 +38,10 @@ export const Address = styled.div`
 
     > address {
         color: rgb(250, 250, 250, 0.3)
+    }
+
+    @media(max-width: 1024px){
+        padding: 40px 0;
     }
 `;
 
