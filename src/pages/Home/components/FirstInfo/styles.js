@@ -7,7 +7,11 @@ export const Container = styled.section`
     align-items: center;
     justify-content: space-between;
 
-    padding: 100px 0;
+    padding: 50px 20px;
+
+    @media(max-width: 770px){
+        flex-direction:column-reverse;
+    }
 
 `;
 
@@ -32,7 +36,7 @@ export const RightContent = styled.div`
     justify-content: center;
     align-items: center;
 
-    > p {
+    > h2 {
 
         max-width: 340px;
 
@@ -47,5 +51,17 @@ export const RightContent = styled.div`
         text-align: right;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+    }
+
+    @media(max-width: 770px){
+        flex-direction:column;
+        margin-top: 20px;
+
+        > h2 {
+            margin-bottom: 10px;
+        }
+        > img {
+            margin-bottom: 20px;
+        }
     }
 `;

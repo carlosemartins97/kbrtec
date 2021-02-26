@@ -23,9 +23,9 @@ const FirstInfo = () => {
             </LeftContent>
 
             <RightContent>
-                <p>
+                <h2>
                     specimen book. It has survived not only fiver...
-                </p>
+                </h2>
 
                 <img src={infoImg} alt="Foto de um rapaz construindo seu caminho."/>
             </RightContent>

@@ -12,6 +12,10 @@ export const Container = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        h1, h2 {
+            text-align: center;
+        }
     }
 `;
 
@@ -51,7 +55,7 @@ export const Title = styled.h1`
 `;
 
 
-export const Subtitle = styled.p`
+export const Subtitle = styled.h2`
     margin: 20px 0;
     font-family: 'Oswald';
     font-weight: bold;
@@ -68,7 +72,6 @@ export const Description = styled.p`
     line-height: 180%;
 
     >span {
-        font-family: Fira Sans;
         font-size: 15px;
         line-height: 180%;
         font-weight: bold;
