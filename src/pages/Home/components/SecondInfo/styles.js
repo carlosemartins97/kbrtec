@@ -48,7 +48,7 @@ export const ContentTitle = styled.div`
         letter-spacing: 0.1em;
         text-transform: uppercase;
     }
-    @media(max-width: 770px){
+    @media(max-width: 1050px){
         flex-direction: column;
 
         > h2 {
@@ -98,7 +98,7 @@ export const GridContent = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
-    @media(max-width: 770px){
+    @media(max-width: 1050px){
         grid-template-columns: repeat(2, 1fr);
     }
     @media(max-width: 500px){

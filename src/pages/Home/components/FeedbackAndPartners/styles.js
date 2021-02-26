@@ -87,7 +87,7 @@ export const Description = styled.p`
 export const VideoArea = styled.div`
     display: flex;
     flex-direction:  column;
-    justify-content: space-around;
+    justify-content: center;
     
     > img {
         padding: 10px 0;
@@ -99,29 +99,35 @@ export const VideoArea = styled.div`
 
 export const PartnersArea = styled.div`
     display: grid;
-    grid-template-rows: repeat(3, 100px);
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 100px;
     grid-column-gap: 50px;
 
     @media(max-width: 1465px){
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         justify-items:center;
+        grid-row-gap: 10px;
+        grid-column-gap: 0;
     }
 
 `;
 
 export const ImageContainer = styled.div`
-        display: flex;
-        justify-content: center;
-        align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
-        background: ${props => props.theme.colors.white};
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+    background: ${props => props.theme.colors.white};
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 
-        width: 150px;
-        height: 180px;
+    width: 150px;
+    height: 180px;
+
+    @media(max-width: 1465px){
+        width: 100%;
+        height: 125px;
+    }
 `;
 
 
