@@ -59,6 +59,7 @@ const SecondInfo = () => {
                 <GridTitle>
                     A like Aldus PageMaker including
                 </GridTitle>
+                
                 <GridContent>
                     {
                         gridData.map(item => {

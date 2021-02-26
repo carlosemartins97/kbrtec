@@ -45,7 +45,6 @@ export const LeftContent = styled.div`
 
         font-family: Fira Sans;
         font-style: normal;
-        font-weight: 500;
         font-size: 15px;
         line-height: 180%;
 

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.section`
-margin-top: 100px;
-margin-bottom: 100px;
+    padding: 100px 50px;
 `;
 
 export const Content = styled.div`
@@ -13,6 +12,10 @@ export const Content = styled.div`
 
     margin-top: 65px;
     margin-bottom: 50px;
+
+    @media(max-width: 770px){
+        flex-direction: column;
+    }
 `;
 
 export const ContentTitle = styled.div`
@@ -45,6 +48,14 @@ export const ContentTitle = styled.div`
         letter-spacing: 0.1em;
         text-transform: uppercase;
     }
+    @media(max-width: 770px){
+        flex-direction: column;
+
+        > h2 {
+            padding: 50px 0;
+            text-align: center;
+        }
+    }
 `;
 
 export const ContentDescription = styled.div`
@@ -61,6 +72,10 @@ export const ContentDescription = styled.div`
             font-size: 15px;
             line-height: 180%;
         }
+
+    @media(max-width: 770px){
+        text-align: center;
+    }
 `;
 
 export const Grid = styled.div`
@@ -78,9 +93,15 @@ export const GridTitle = styled.h3`
 
 export const GridContent = styled.div`
     margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media(max-width: 770px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: 500px){
+        grid-template-columns: repeat(1, 1fr);
+    }
 
 `;
 
