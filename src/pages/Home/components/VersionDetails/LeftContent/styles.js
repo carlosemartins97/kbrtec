@@ -8,6 +8,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    padding-bottom: 80px;
 `;
 export const FirstHalf = styled.div`
     display: flex;
@@ -20,6 +22,7 @@ export const FirstHalf = styled.div`
 `;
 
 export const ContentSubtitle = styled.h3`
+    max-width: 400px;
     width: 400px;
 
     padding: 40px 0;
@@ -31,6 +34,11 @@ export const ContentSubtitle = styled.h3`
     text-transform: uppercase;
 
     color: ${props => props.theme.colors.secondary};
+
+    @media(max-width: 500px){
+        max-width: 350px;
+        width: 350px; 
+    }
 `;
 
 export const ContentInfo = styled.p`
@@ -38,12 +46,18 @@ export const ContentInfo = styled.p`
     font-size: 15px;
     line-height: 136.5%;
 
-    padding-bottom: 20px;
+    padding: 0 10px 20px 10px;
 
-    width: 400px;
+    max-width: 400px;
+
+    @media(max-width: 500px){
+        max-width: 350px;
+        width: 350px; 
+    }
 `;
 
 export const ContentList = styled.ul`
+    max-width: 400px;
     width: 400px;
 
     list-style: none;
@@ -54,6 +68,11 @@ export const ContentList = styled.ul`
 
     padding-top: 40px;
     padding-bottom: 20px;
+
+    @media(max-width: 500px){
+        max-width: 350px;
+        width: 350px; 
+    }
 `;
 
 export const ListItem = styled.li`

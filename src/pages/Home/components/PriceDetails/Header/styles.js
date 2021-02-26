@@ -4,7 +4,6 @@ export const Container = styled.div`
     font-family: 'Oswald';
     letter-spacing: 0.2em;
     
-    position: relative;
 
     display: flex;
     flex-direction: column;

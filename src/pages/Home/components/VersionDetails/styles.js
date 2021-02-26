@@ -4,8 +4,6 @@ export const Container = styled.section`
     display: flex;
     flex: 1;
 
-    height: 1300px;
-
     h2 {
         font-family: 'Oswald';
         font-size: 25px;
@@ -15,7 +13,13 @@ export const Container = styled.section`
     }
 
      h2, span {
+        max-width: 400px;
         width: 400px;
+
+        @media(max-width: 500px){
+            max-width: 350px;
+            width: 350px; 
+        }
     }
 
      span {
@@ -25,7 +29,15 @@ export const Container = styled.section`
 
     a {
         background: ${props => props.theme.colors.secondary};
-        width: 400px;
+        max-width: 450px;
         text-align: center;
+        @media(max-width: 500px){
+            max-width: 350px;
+            width: 350px; 
+        }
+    }
+
+    @media(max-width: 770px){
+        flex-direction: column;
     }
 `;

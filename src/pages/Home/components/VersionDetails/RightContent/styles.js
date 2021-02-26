@@ -71,7 +71,7 @@ export const ListItem = styled.li`
         > img {
             width: 70%;
             border-radius: 50%;
-            border: 2px solid green;
+            border: 1px solid green;
             padding: 1px;
         }
     }

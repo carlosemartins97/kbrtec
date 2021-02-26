@@ -4,7 +4,6 @@ export const Container = styled.div`
     font-family: 'Fira Sans';
 
     background: linear-gradient(180deg, rgba(25, 112, 129, 0.1) -3.79%, rgba(247, 247, 249, 0) 32.02%);
-    position: relative;
 
     display: flex;
     flex-direction: column;
