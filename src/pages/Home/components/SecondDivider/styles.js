@@ -34,7 +34,7 @@ export const TextArea = styled.div`
 
     > h2 {
         color: ${props => props.theme.colors.white};
-        width: 400px;
+        width: 500px;
         font-family: 'Oswald';
         font-size: 25px;
         line-height: 37px;
@@ -46,11 +46,13 @@ export const TextArea = styled.div`
         }
     }
     > p {
+        margin-top: 20px;
+
         color: ${props => props.theme.colors.white};
 
-        width: 400px;
+        width: 500px;
 
-        font-family: Fira Sans;
+        font-family: 'Fira Sans';
         font-style: normal;
         font-weight: normal;
         font-size: 15px;

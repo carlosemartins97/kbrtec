@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import headerImg from '../../../../core/assets/headerimg.png'
 
-export const Container = styled.section`
+export const Container = styled.header`
     background: linear-gradient(
             220.36deg, rgba(25, 112, 129, 0.32) 0%, 
             rgba(247, 247, 249, 0) 65%

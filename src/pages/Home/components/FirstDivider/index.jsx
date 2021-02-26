@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Divisor from '../../../../core/components/Divisor';
+import Divider from '../../../../core/components/Divider';
 
 import Logo from '../../../../core/assets/logo2.png';
 
@@ -11,7 +11,7 @@ import {
 
 const FirstDivider = () => {
     return (
-        <Divisor>
+        <Divider>
                 <ImageArea>
                     <img src={Logo} alt="Logo da empresa"/>
                     <h2>
@@ -30,7 +30,7 @@ const FirstDivider = () => {
                         PageMaker including versions of Lorem Ipsum.
                     </p>
                 </TextArea>
-            </Divisor>
+            </Divider>
     )
 }
 

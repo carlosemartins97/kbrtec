@@ -5,7 +5,7 @@ import {
 
 } from './styles';
 
-const Divisor = ({children}) => {
+const Divider = ({children}) => {
     return (
         <Container>
             {children}
@@ -13,5 +13,5 @@ const Divisor = ({children}) => {
     );
 };
 
-export default Divisor;
+export default Divider;
 

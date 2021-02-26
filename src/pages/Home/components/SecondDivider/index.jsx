@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Divisor from '../../../../core/components/Divisor';
+import Divider from '../../../../core/components/Divider';
 import Button from '../../../../core/components/Button';
 
 
@@ -11,7 +11,7 @@ import {
 
 const SecondDivider = () => {
     return (
-        <Divisor>
+        <Divider>
             <TextArea>
                 <h2>
                     Versions of Lorem Ipsum Letraset sheets 
@@ -30,7 +30,7 @@ const SecondDivider = () => {
                 </Button>
             </ButtonArea>
 
-        </Divisor>
+        </Divider>
     )
 }
 
