@@ -14,6 +14,7 @@ import PriceDetails from './components/PriceDetails';
 import FeedbackAndPartners from './components/FeedbackAndPartners';
 import ProsAndCons from './components/ProsAndCons';
 import Video from './components/Video';
+import Footer from './components/Footer';
 
 import {
     Container,
@@ -49,6 +50,8 @@ const Home = () => {
             <ProsAndCons />
 
             <Video />
+
+            <Footer />
 
         </Container>
         
