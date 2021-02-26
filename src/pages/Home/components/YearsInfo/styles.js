@@ -4,12 +4,18 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
     display: flex;
+
+    @media(max-width: 770px){
+        flex-direction: column;
+    }
 `;
 export const LeftContent = styled.div`
     display: flex;
     flex-direction: column; 
     align-items: center;
     flex: 1;
+
+    padding-top: 100px;
     
     background: linear-gradient(60deg,
             ${props => props.theme.colors.gradient.primary} -68%, 
@@ -31,8 +37,6 @@ export const LeftContent = styled.div`
 
         letter-spacing: 0.1em;
         text-transform: uppercase;
-
-        margin-top: 100px;
     }
 
     > p {
@@ -47,6 +51,14 @@ export const LeftContent = styled.div`
 
         > span {
             color: ${props => props.theme.colors.secondary};
+        }
+    }
+
+    @media(max-width: 770px){
+        padding: 50px 20px;
+        > h2 {
+            margin: unset;
+            margin-bottom: 50px;
         }
     }
 
@@ -85,6 +97,14 @@ export const InfoHeader = styled.div`
         letter-spacing: 0.1em;
         text-transform: uppercase;
     }
+    @media(max-width: 500px){
+        flex-direction: column;
+        align-items: center;
+
+        > h2 {
+            margin-bottom: 20px;
+        }
+    }
 `;
 
 export const Dollar = styled.div`
@@ -101,7 +121,7 @@ export const Dollar = styled.div`
 
     color: ${props => props.theme.colors.secondary};
 
-    font-family: Fira Sans;
+    font-family: 'Fira Sans';
     font-weight: 500;
     font-size: 50px;
 
@@ -140,6 +160,12 @@ export const List = styled.ul`
     margin-left: 12.2px;
     margin-top: 80px;
     padding-bottom: 50px;
+
+    @media(max-width: 500px){
+        margin: unset;
+        margin-left: 12.2px;
+
+    }
 `;
 
 export const ListItem = styled.li`
@@ -151,6 +177,7 @@ export const ListItem = styled.li`
 export const ListContent = styled.div`
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 
     > span {
         font-size: 25px;
@@ -168,6 +195,12 @@ export const ListContent = styled.div`
         line-height: 37px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
+    }
+
+    @media(max-width: 500px){
+        > span {
+            display: none;
+        }
     }
 `;
 
