@@ -25,7 +25,7 @@ export const ButtonArea = styled.div`
         }
     }
 
-    @media(max-width: 770px){
+    @media(max-width: 1024px){
        width: 100%;
        height: 100%;
        margin: unset; 
@@ -67,12 +67,12 @@ export const TextArea = styled.div`
         font-size: 15px;
         line-height: 136.5%;
         
-        @media(max-width: 770px){
+        @media(max-width: 1024px){
             padding: 30px 0;
         }
     }
 
-    @media(max-width: 500px){
+    @media(max-width: 770px){
         flex: unset;
         width: 100%;
     }

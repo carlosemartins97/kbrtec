@@ -9,7 +9,7 @@ export const Container = styled.section`
 
     padding: 50px 20px;
 
-    @media(max-width: 770px){
+    @media(max-width: 1024px){
         flex-direction:column-reverse;
     }
 
@@ -53,7 +53,7 @@ export const RightContent = styled.div`
         text-transform: uppercase;
     }
 
-    @media(max-width: 770px){
+    @media(max-width: 1024px){
         flex-direction:column;
         margin-top: 20px;
 

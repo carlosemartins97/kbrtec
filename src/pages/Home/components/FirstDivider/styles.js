@@ -22,7 +22,7 @@ export const ImageArea = styled.div`
         text-transform: uppercase;
     }
 
-    @media(max-width: 500px){
+    @media(max-width: 1024px){
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -58,7 +58,7 @@ export const TextArea = styled.div`
         }
     }
 
-    @media(max-width: 500px){
+    @media(max-width: 1024px){
         padding: 20px;
     }
 `;

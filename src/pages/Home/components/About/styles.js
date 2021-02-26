@@ -7,7 +7,7 @@ export const Container = styled.section`
 
     padding: 10px;
 
-    @media(max-width: 770px){
+    @media(max-width: 1024px){
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -29,7 +29,7 @@ export const TextContainer = styled.div`
     
     max-width: 600px;
 
-    @media(max-width: 770px){
+    @media(max-width: 1024px){
         margin: 0;
         margin-bottom: 50px;
     }
@@ -96,7 +96,7 @@ export const Social = styled.div`
         width: 40px;
     }
 
-    @media(max-width: 770px){
+    @media(max-width: 1024px){
         margin: 50px 0;
         display: flex;
         justify-content: center;
