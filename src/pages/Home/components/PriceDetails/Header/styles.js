@@ -3,12 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
     font-family: 'Oswald';
     letter-spacing: 0.2em;
-    
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+
     > :first-child {
         width: 180px;
         height: 180px;
@@ -24,6 +25,10 @@ export const Container = styled.div`
         > img {
             transform: rotate(45deg);
         }
+    }
+
+    @media(max-width: 770px){
+        padding: 50px 20px;
     }
 `;
 
@@ -52,8 +57,13 @@ export const ContentInfo = styled.cite`
     font-style: italic;
     font-size: 20px;
     line-height: 136.5%;
+    text-align: center;
 
     padding-bottom: 115px;
+
+    @media(max-width: 770px){
+        font-size: 15px;
+    }
 `;
 
 
@@ -62,6 +72,7 @@ export const ContentFooter = styled.span`
     font-size: 20px;
     line-height: 136.5%;
 
+    text-align: center;
     padding-bottom: 110px;
 `;
 
@@ -72,5 +83,10 @@ export const DoubleQuotes = styled.span`
     text-transform: uppercase;
 
     color: #197081;
+
+    @media(max-width: 770px){
+        font-size: 50px;
+        line-height: 50px;
+    }
 `;
 

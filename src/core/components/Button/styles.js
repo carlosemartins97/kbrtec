@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.a`
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: bold;
     font-size: 15px;

@@ -10,24 +10,36 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width: 770px){
+        flex-direction: column;
+    }
 `;
 
 export const FirstOfferButton = styled.a`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     
-    margin-right: 10px;
     padding: 0 20px;
+    margin: 0 5px;
     
-    width: 600px;
-    height: 130px;
+    max-width: 600px;
+    height: 200px;
     background: ${props => props.theme.colors.warning};
     border-radius: 20px;
 
     &:hover {
         transition: opacity .3s;
         opacity: .7;
+    }
+    @media(max-width: 770px){
+        margin-bottom: 20px;
+    }
+    @media(max-width: 550px){
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 `;
 
@@ -42,10 +54,10 @@ export const SecondOfferButton = styled.a`
     border-radius: 20px;
 
     padding: 0 20px;
-    margin-left: 10px;
+    margin: 0 5px;
 
-    width: 600px;
-    height: 130px;
+    max-width: 600px;
+    height: 200px;
 
     > span {
         color: ${props => props.theme.colors.warning};
@@ -63,20 +75,26 @@ export const SecondOfferButton = styled.a`
         transition: opacity .3s;
         opacity: .5;
     }
+
+    @media(max-width: 550px){
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 `;
 
 export const OfferPrice = styled.span`
-        font-family: 'Oswald';
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 60px;
-        letter-spacing: 0.1em;
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0.1em;
 
-        color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.white};
 `;
 
 export const OfferText = styled.span`
-    width: 250px;
+    max-width: 250px;
 
     color: ${props => props.theme.colors.white};
     font-weight: 600;

@@ -27,6 +27,10 @@ export const ContentSubtitle = styled.h3`
     text-transform: uppercase;
 
     color: ${props => props.theme.colors.secondary};
+    @media(max-width: 500px){
+            max-width: 350px;
+            width: 350px; 
+    }
 `;
 
 export const ContentInfo = styled.p`
@@ -37,6 +41,10 @@ export const ContentInfo = styled.p`
     padding-bottom: 20px;
 
     width: 400px;
+    @media(max-width: 500px){
+        max-width: 350px;
+        width: 350px; 
+    }
 `;
 
 export const ContentList = styled.ul`
@@ -49,6 +57,11 @@ export const ContentList = styled.ul`
     line-height: 287%;
 
     padding-bottom: 20px;
+
+    @media(max-width: 500px){
+        max-width: 350px;
+        width: 350px; 
+    }
 `;
 
 export const ListItem = styled.li`

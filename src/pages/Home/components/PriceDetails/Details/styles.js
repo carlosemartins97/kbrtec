@@ -10,16 +10,29 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    padding-bottom: 120px;
+    padding: 0 20px 120px 20px;
 
     > a {
         padding: 0 70px;
+        @media(max-width: 500px){
+            padding: 0 20px;
+        }
+    }
+
+    @media(max-width: 770px){
+        padding: 50px 20px;
     }
 `;
 
 export const FormationContainer = styled.div`
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+
+    @media(max-width: 1000px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+    }
 `;
 
 export const Formation = styled.div`
@@ -28,8 +41,6 @@ export const Formation = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-
-    margin: 0 50px;
 
 
     > :first-child {
@@ -109,9 +120,13 @@ export const ContentDetails = styled.div`
         font-size: 27px;
         line-height: 136.5%;
     }
+
+    @media(max-width: 550px){
+        flex-direction: column;
+    }
 `;
 export const DescriptionDetails = styled.div`
-    width: 600px;
+    max-width: 600px;
     margin-right: 20px;
 
     > h2 {
@@ -125,13 +140,20 @@ export const DescriptionDetails = styled.div`
     > p {
         padding: 35px 0;
     }
+    @media(max-width: 550px){
+        padding-bottom: 20px;
+    }
 `;
 export const ExamplesDetails = styled.div`
-    width: 600px;
+    max-width: 600px;
     margin-left: 20px;
 
     > p {
         font-weight: bold;
+    }
+
+    @media(max-width: 550px){
+        margin-left: 0;
     }
 `;
 export const ExamplesList = styled.ul`
