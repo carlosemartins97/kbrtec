@@ -89,6 +89,8 @@ export const GridTitle = styled.h3`
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+
+    padding-top: 50px;
 `;
 
 export const GridContent = styled.div`

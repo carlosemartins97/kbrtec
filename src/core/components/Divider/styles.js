@@ -6,7 +6,7 @@ export const Container = styled.div`
     background: url(${divisorImg});
     background-repeat: repeat;
     background-blend-mode: exclusion;
-    height: 400px;
+    height: 100%;
     background-color: ${props => props.theme.colors.black};
     
 
@@ -17,5 +17,6 @@ export const Container = styled.div`
     @media(max-width: 770px){
         flex-direction: column;
         height: 100%;
+        padding: 30px 30px;
     }
 `;

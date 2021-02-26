@@ -19,13 +19,22 @@ export const ButtonArea = styled.div`
         text-transform: uppercase;
         text-align: center;
 
-        width: 60%;
-
         background: ${props => props.theme.colors.secondary};
+        @media(max-width: 400px){
+            font-size: 13px;
+        }
+    }
+
+    @media(max-width: 770px){
+       width: 100%;
+       height: 100%;
+       margin: unset; 
     }
 `;
 
 export const TextArea = styled.div`
+        padding: 20px 0;
+
         flex: 1;    
         display: flex;
         flex-direction:column;
@@ -34,7 +43,7 @@ export const TextArea = styled.div`
 
     > h2 {
         color: ${props => props.theme.colors.white};
-        width: 500px;
+        max-width: 500px;
         font-family: 'Oswald';
         font-size: 25px;
         line-height: 37px;
@@ -50,12 +59,21 @@ export const TextArea = styled.div`
 
         color: ${props => props.theme.colors.white};
 
-        width: 500px;
+        max-width: 500px;
 
         font-family: 'Fira Sans';
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
         line-height: 136.5%;
+        
+        @media(max-width: 770px){
+            padding: 30px 0;
+        }
+    }
+
+    @media(max-width: 500px){
+        flex: unset;
+        width: 100%;
     }
 `;

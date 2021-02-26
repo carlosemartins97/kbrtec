@@ -5,6 +5,7 @@ export const ImageArea = styled.div`
     display: flex;
     align-items: center;
     margin-right: 130px;
+    padding: 20px 0;
 
     > h2 {
         margin-left: 40px;
@@ -25,8 +26,6 @@ export const ImageArea = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        padding: 20px 0;
 
         margin: unset;
 
