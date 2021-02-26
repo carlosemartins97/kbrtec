@@ -29,11 +29,15 @@ export const Container = styled.section`
             transform: rotate(45deg);
         }
     }
+
+    @media(max-width: 770px){
+        padding: 50px 20px;
+    }
 `;
 
 export const ContentInfo = styled.div`
     text-align: center;
-    width: 600px;
+    max-width: 600px;
 `;
 
 export const ContentTitle = styled.h2`
@@ -79,7 +83,7 @@ export const ContentProsAndCons = styled.div`
     }
 
     p {
-        width: 420px;
+        max-width: 420px;
         margin-top: 30px;
         
         padding: 40px;
@@ -87,6 +91,10 @@ export const ContentProsAndCons = styled.div`
         text-align: center;
 
         border-radius: 10px;
+    }
+
+    @media(max-width: 770px){
+        flex-direction: column;
     }
 `;
 
@@ -98,6 +106,10 @@ export const Pros = styled.div`
 
         color: ${props => props.theme.colors.black};
     }
+    @media(max-width: 770px){
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 `;
 
 export const Cons = styled.div`
@@ -105,6 +117,10 @@ export const Cons = styled.div`
 
     > p {
         background-color: ${props => props.theme.colors.warning};
+    }
+    @media(max-width: 770px){
+        margin-left: 0;
+        margin-top: 15px;
     }
 `;
 
