@@ -14,7 +14,7 @@ export const Container = styled.div`
         background: unset;
         z-index: 0;
         
-        border: 2px solid rgba(25, 112, 129, 0.1);
+        border: 2px solid rgba(25, 112, 129, 0.3);
         border-radius: 50px;
     }
     > :last-child {
@@ -30,11 +30,14 @@ export const Container = styled.div`
         right: -7%;
     }
 
-    @media(max-width: 1500px){
+    @media(max-width: 1600px){
         left: -20%;
     }
+    @media(max-width: 1500px){
+        left: -25%;
+    }
     @media(max-width: 1280px){
-        left: -30%;
+        left: -33%;
     }
     @media(max-width: 1024px){
         left: -40%;

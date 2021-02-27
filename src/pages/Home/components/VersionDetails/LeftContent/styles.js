@@ -124,14 +124,3 @@ export const LastInfo = styled.div`
 
     background: #000;
 `;
-
-export const BackgroundDetails = styled.div`
-    > :first-child{
-        > :last-child{
-            display: none;
-        }
-        div {
-            border: 2px solid rgba(25, 112, 129, 0.2);
-        }
-    }
-`;

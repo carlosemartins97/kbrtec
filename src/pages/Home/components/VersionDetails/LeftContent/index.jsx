@@ -13,9 +13,7 @@ import {
     LastInfo,
     ContentSubtitle,
     ContentInfo,
-    BackgroundDetails,
 } from './styles';
-import TwoSquadsBackground from '../../../../../core/components/TwoSquadsBackground';
 
 const LeftContent = () => {
 
@@ -62,11 +60,7 @@ const LeftContent = () => {
             </FirstHalf>
 
             <SecondHalf>
-
-                <BackgroundDetails>
-                    <TwoSquadsBackground/>
-                </BackgroundDetails>
-
+                
                 <InfoTranslation>
                     <ContentSubtitle>
                         1914 translation by H. Rackham

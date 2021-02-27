@@ -6,6 +6,7 @@ import instaImg from '../../../../core/assets/insta.png'
 import twitterImg from '../../../../core/assets/twitter.png'
 
 import Rectangle from '../../../../core/components/Rectangle'
+import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground'
 
 import {
     Container,
@@ -63,8 +64,7 @@ const About = () => {
             </TextContainer>
             
             <RightBackgroundDetails>
-                <Rectangle />
-                <Rectangle />
+                <TwoSquadsBackground />
             </RightBackgroundDetails>
         </Container>
     );

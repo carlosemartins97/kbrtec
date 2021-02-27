@@ -130,37 +130,12 @@ export const LeftBackgroundDetails = styled.div`
 `;
 
 export const RightBackgroundDetails = styled.div`
-    position: absolute;
-    right: -10%;
-    top: -20%;
-    z-index: 0;
-    > :first-child {
-        position: absolute;
-        top: 20%;
-    }
-    div {
-        width: 400px;
-        height: 400px;      
-        background: unset;
-        
-        border: 2px solid rgba(25, 112, 129, 0.1);
-        border-radius: 50px;
-    }
-
-    @media(max-width: 1280px){
-        right: -25%;
-    }
-    @media(max-width: 1024px){
-        right: -30%;
-    }
-    @media(max-width: 770px){
-        right: -45%;
-    }
-    @media(max-width: 550px){
-        right: -60%;
-    }
-    @media(max-width: 450px){
-        right: -90%;
+    > :first-child{
+        left: 90%;
+        top: 0%;
+        > :last-child {
+            display: none;
+        }
     }
 
 `;
