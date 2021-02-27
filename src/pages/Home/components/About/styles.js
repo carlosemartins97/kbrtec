@@ -21,6 +21,14 @@ export const Container = styled.section`
 
 export const ImgContainer = styled.div`
     border-radius: 13px;
+    z-index: 3;
+
+    position: relative;
+
+    > img {
+        z-index: 3;
+        position: relative;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -101,4 +109,47 @@ export const Social = styled.div`
         display: flex;
         justify-content: center;
     }
+`;
+
+export const BackgroundDetails = styled.div`
+
+    >:first-child {
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+        z-index: 1;
+        position: absolute;
+        left: -30%;
+        top: 5%;
+    }
+`;
+
+export const RightDetails = styled.div`
+    position: absolute;
+    right: -290%;
+    top: -30%;
+    z-index: 0;
+    > :first-child {
+        position: absolute;
+        top: 20%;
+    }
+    div {
+        width: 400px;
+        height: 400px;      
+        background: unset;
+        
+        border: 2px solid rgba(25, 112, 129, 0.1);
+        border-radius: 50px;
+    }
+
+    @media(max-width: 1280px){
+        right: -230%;
+    }
+    @media(max-width: 1024px){
+        right: -130%;
+    }
+    @media(max-width: 770px){
+        right: -100%;
+    }
+
 `;

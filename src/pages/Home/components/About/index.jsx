@@ -5,6 +5,8 @@ import faceImg from '../../../../core/assets/facebook.png'
 import instaImg from '../../../../core/assets/insta.png'
 import twitterImg from '../../../../core/assets/twitter.png'
 
+import Rectangle from '../../../../core/components/Rectangle'
+
 import {
     Container,
     ImgContainer,
@@ -13,12 +15,21 @@ import {
     Subtitle,
     Description,
     Social,
+    BackgroundDetails,
+    RightDetails,
 } from './styles';
 
 const About = () => {
     return (
         <Container>
             <ImgContainer>
+                <BackgroundDetails>
+                    <Rectangle />
+                    <RightDetails>
+                        <Rectangle />
+                        <Rectangle />
+                    </RightDetails>
+                </BackgroundDetails>
                 <img src={aboutImg} alt="Foto da pessoa dona do site."/>
                 <Social>
                     <a href="https://www.facebook.com/kbrtec" target="_blank" rel="noreferrer"><img src={faceImg} alt="Foto da pessoa dona do site."/></a>
