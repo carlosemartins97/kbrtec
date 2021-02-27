@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Rectangle from '../../../../core/components/Rectangle';
+
 import {
     Container,
     LeftContent,
@@ -10,7 +12,8 @@ import {
     List,
     ListItem,
     ListContent,
-    InfoListItem
+    InfoListItem,
+    BackgroundDetails
 
 } from './styles';
 
@@ -25,6 +28,10 @@ const YearsInfo = () => {
     return (
         <Container>
             <LeftContent>
+                <BackgroundDetails>
+                    <Rectangle />
+                    <Rectangle />
+                </BackgroundDetails>
                 <h2>type specimen book. It has survive</h2>
 
                 <p>

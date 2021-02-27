@@ -5,6 +5,8 @@ import styled from 'styled-components';
 export const Container = styled.section`
     display: flex;
 
+    position: relative;
+
     @media(max-width: 770px){
         flex-direction: column;
     }
@@ -222,5 +224,37 @@ export const InfoListItem = styled.div`
         line-height: 27px;
         letter-spacing: 0.005em;
         text-transform: uppercase;
+    }
+`;
+
+export const BackgroundDetails = styled.div`
+    position: absolute;
+    left: -5%;
+    top: 20%;
+    z-index: 0;
+    > :first-child {
+        position: absolute;
+        top: 20%;
+    }
+    div {
+        width: 400px;
+        height: 400px;      
+        background: unset;
+        
+        border: 2px solid rgba(25, 112, 129, 0.2);
+        border-radius: 50px;
+    }
+
+    @media(max-width: 770px){
+        top: 0%;
+        left: -50%;
+    }
+    @media(max-width: 550px){
+        top: 0%;
+        left: -60%;
+    }
+    @media(max-width: 450px){
+        top: 0%;
+        left: -90%;
     }
 `;
