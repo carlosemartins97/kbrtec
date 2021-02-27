@@ -13,7 +13,7 @@ export const Container = styled.header`
 `;
 
 export const NavHeader = styled.div`
-    z-index: 3;
+    z-index: 5;
 
     display: flex;
 
@@ -283,6 +283,20 @@ export const RectangleBackgrounds = styled.div`
         height: 450px;
 
         border-radius: 57px;
+    }
+`;
+
+export const RectangleWhiteBackground = styled.div`
+
+    > :first-child {
+        width: 650px;
+        height: 650px;
+        background: linear-gradient(350deg, rgba(255, 255, 255) 4.85%, rgba(255, 255, 255, 0) 74.04%);
+        border-radius: 57px;
+        position: absolute;
+        z-index: 0;
+        left: 20%;
+        top: -20%;
     }
 `;
 

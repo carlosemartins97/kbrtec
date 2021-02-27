@@ -18,6 +18,7 @@ import {
     RectangleImage,
     RectangleBackgrounds,
     BackgroundDetails,
+    RectangleWhiteBackground,
 } from './styles';
 
 
@@ -74,6 +75,9 @@ const Header = () => {
                         <RectangleBackgrounds>
 
                             <Rectangle /> 
+                            <RectangleWhiteBackground>
+                                <Rectangle />
+                            </RectangleWhiteBackground>
                             <Rectangle />
                             
                         </RectangleBackgrounds>
