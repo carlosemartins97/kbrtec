@@ -7,7 +7,7 @@ import {
     Container,
     Content,
     Address,
-    Design
+    DesignButton
 } from './styles';
 
 const Footer = () => {
@@ -21,10 +21,10 @@ const Footer = () => {
                     <address>Av. Senador Feijó, 686 - Vila Matias, Santos - SP, 11015-504</address>
                 </Address>
 
-                <Design>
+                <DesignButton href="https://www.kbrtec.com.br/" target="_blank" rel="noreferrer">
                     <span>Design by</span>
                     <img src={kbrtecLogo} alt=""/>
-                </Design>
+                </DesignButton>
             </Content>
         </Container>
     )

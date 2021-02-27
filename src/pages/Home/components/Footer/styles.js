@@ -45,7 +45,7 @@ export const Address = styled.div`
     }
 `;
 
-export const Design = styled.div`
+export const DesignButton = styled.a`
     > span {
         margin-right: 10px;
     }

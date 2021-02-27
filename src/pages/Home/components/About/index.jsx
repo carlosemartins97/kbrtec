@@ -21,9 +21,9 @@ const About = () => {
             <ImgContainer>
                 <img src={aboutImg} alt="Foto da pessoa dona do site."/>
                 <Social>
-                    <a href="https://www.facebook.com/kbrtec"><img src={faceImg} alt="Foto da pessoa dona do site."/></a>
-                    <a href="https://www.instagram.com/kbrtec/"><img src={instaImg} alt="Foto da pessoa dona do site."/></a>
-                    <a href="https://twitter.com/kbrtec"><img src={twitterImg} alt="Foto da pessoa dona do site."/></a>
+                    <a href="https://www.facebook.com/kbrtec" target="_blank" rel="noreferrer"><img src={faceImg} alt="Foto da pessoa dona do site."/></a>
+                    <a href="https://www.instagram.com/kbrtec/" target="_blank" rel="noreferrer"><img src={instaImg} alt="Foto da pessoa dona do site."/></a>
+                    <a href="https://twitter.com/kbrtec" target="_blank" rel="noreferrer"><img src={twitterImg} alt="Foto da pessoa dona do site."/></a>
                 </Social>
             </ImgContainer>
             <TextContainer>
