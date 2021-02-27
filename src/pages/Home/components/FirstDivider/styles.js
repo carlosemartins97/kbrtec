@@ -59,6 +59,6 @@ export const TextArea = styled.div`
     }
 
     @media(max-width: 1024px){
-        padding: 20px;
+        padding: 20px 0;
     }
 `;

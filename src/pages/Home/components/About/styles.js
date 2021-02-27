@@ -5,7 +5,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
 
-    padding: 10px;
+    padding: 20px;
 
     @media(max-width: 1024px){
         margin: 0;
