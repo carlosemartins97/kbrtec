@@ -126,9 +126,10 @@ export const ContentHeader = styled.div`
 
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex: 1;
 
-    padding: 100px 0;
+    padding: 100px 100px;
 
     @media(max-width: 770px){
         flex-direction: column;
@@ -140,7 +141,7 @@ export const ContentHeader = styled.div`
 export const ContentText = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 
     >h1 {
@@ -186,6 +187,10 @@ export const ContentText = styled.div`
             width: 100%;
         }
     }
+    @media(max-width: 1000px){
+        text-align: center;
+        align-items: center;
+    }
 `;
 
 export const ContentImage = styled.div`
@@ -197,7 +202,7 @@ export const ContentImage = styled.div`
 
     position: relative;
 
-    @media(max-width: 900px){
+    @media(max-width: 1000px){
         display: none;
     }
 
