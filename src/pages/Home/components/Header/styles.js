@@ -124,6 +124,8 @@ export const MoreInfo = styled.div`
 export const ContentHeader = styled.div`
     width: 100%;
 
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -141,14 +143,17 @@ export const ContentHeader = styled.div`
 export const ContentText = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
+
+    z-index: 1;
 
     >h1 {
         font-family: 'Oswald';
         font-size: 30px;
         line-height: 155.5%;
         /* or 47px */
+        max-width: 550px;
 
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -168,18 +173,24 @@ export const ContentText = styled.div`
         font-size: 15px;
         line-height: 180%;
         margin: 25px 0;
+        width: 550px;
+
+        @media(max-width: 550px){
+            width: 100%;
+        }
     }
     
     //Botão
     > a {
-        width: 500px;
+        width: 550px;
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: 550px;
 
         background: ${props => props.theme.colors.secondary};    
     }
-    @media(max-width: 500px){
+    @media(max-width: 550px){
         > h1 {
             font-size: 23px;
         }
@@ -187,7 +198,7 @@ export const ContentText = styled.div`
             width: 100%;
         }
     }
-    @media(max-width: 1000px){
+    @media(max-width: 1024px){
         text-align: center;
         align-items: center;
     }
@@ -202,7 +213,7 @@ export const ContentImage = styled.div`
 
     position: relative;
 
-    @media(max-width: 1000px){
+    @media(max-width: 1024px){
         display: none;
     }
 
@@ -272,6 +283,49 @@ export const RectangleBackgrounds = styled.div`
         height: 450px;
 
         border-radius: 57px;
+    }
+`;
+
+export const BackgroundDetails = styled.div`
+    position: absolute;
+    left: -15%;
+    z-index: 0;
+    > :first-child {
+        position: absolute;
+        top: 20%;
+    }
+    div {
+        width: 400px;
+        height: 400px;      
+        background: unset;
+        
+        border: 2px solid rgba(25, 112, 129, 0.1);
+        border-radius: 50px;
+    }
+    > :last-child {
+        background: ${props => props.theme.colors.secondary};
+
+        width: 100px;
+        height: 100px;
+
+        position: absolute;
+        border-radius: 20px;
+
+        top: 60%;
+        right: -7%;
+    }
+
+    @media(max-width: 1280px){
+        left: -30%;
+    }
+    @media(max-width: 900px){
+        left: -50%;
+    }
+    @media(max-width: 600px){
+        left: -75%;
+    }
+    @media(max-width: 450px){
+        left: -105%;
     }
 `;
 

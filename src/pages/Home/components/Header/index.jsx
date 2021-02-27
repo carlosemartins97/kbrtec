@@ -17,6 +17,7 @@ import {
     Main,
     RectangleImage,
     RectangleBackgrounds,
+    BackgroundDetails,
 } from './styles';
 
 
@@ -40,7 +41,11 @@ const Header = () => {
             </NavHeader>
 
             <ContentHeader>
-
+                <BackgroundDetails>
+                    <Rectangle/>
+                    <Rectangle/>
+                    <Rectangle/>
+                </BackgroundDetails>
                 <ContentText>
                     <h1>
                         standard Lorem Ipsum <br/>

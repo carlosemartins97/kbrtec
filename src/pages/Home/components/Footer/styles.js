@@ -46,6 +46,7 @@ export const Address = styled.div`
 `;
 
 export const DesignButton = styled.a`
+    color: ${props => props.theme.colors.white};
     > span {
         margin-right: 10px;
     }
