@@ -6,6 +6,8 @@ export const Container = styled.section`
     justify-content: center;
     align-items: center;
 
+    position: relative;
+
     color: ${props => props.theme.colors.white};
     background-color: ${props => props.theme.colors.black};
 
@@ -124,6 +126,17 @@ export const Cons = styled.div`
     }
 `;
 
+export const BackgroundDetails = styled.div`
+    > :first-child{
+        top: 10%;
+        > :last-child{
+            display: none;
+        }
+        div {
+            border: 2px solid rgba(25, 112, 129, 0.2);
+        }
+    }
+`;
 
 
 

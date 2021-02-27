@@ -6,6 +6,8 @@ export const Container = styled.section`
     width: 100%;
     display: flex;
 
+    position: relative;
+
     p {
         padding: 30px 0;
     }
@@ -127,6 +129,20 @@ export const ImageContainer = styled.div`
     @media(max-width: 1465px){
         width: 100%;
         height: 125px;
+    }
+`;
+
+export const BackgroundDetails = styled.div`
+    > :first-child {
+        border-radius: 20px;
+
+        position: absolute;
+        right: 3%;
+        top: -3%;
+
+        @media(max-width: 770px){
+            top: -2%;
+        }
     }
 `;
 

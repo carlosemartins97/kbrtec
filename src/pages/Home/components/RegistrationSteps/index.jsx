@@ -60,8 +60,9 @@ const RegistrationSteps = () => {
             </ContentSteps>
             
             <RightBackgroundDetails>
-                <TwoSquadsBackground />
+                <Rectangle />
             </RightBackgroundDetails>
+            
         </Container>
     )
 }

@@ -104,9 +104,20 @@ export const LeftBackgroundDetails = styled.div`
         top: -5%;
     }
 `;
+
 export const RightBackgroundDetails = styled.div`
-    transform: rotate(180deg);
     > :first-child {
-        bottom: 100%;
+        
+        border-radius: 20px;
+        position: absolute;
+        right: 5%;
+        bottom: -7%;
+        @media(max-width: 770px){
+            bottom: -5%;
+        }
+        @media(max-width: 450px){
+            bottom: -2.5%;
+        }
+
     }
 `;

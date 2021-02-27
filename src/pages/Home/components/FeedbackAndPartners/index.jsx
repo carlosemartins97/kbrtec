@@ -13,6 +13,8 @@ import uol from '../../../../core/assets/partners/uol.png'
 import vendamais from '../../../../core/assets/partners/vendamais.png'
 import bandnews from '../../../../core/assets/partners/bandnews.png'
 
+import Rectangle from '../../../../core/components/Rectangle';
+
 import {
     Container,
     Feedback,
@@ -22,7 +24,8 @@ import {
     Description,
     VideoArea,
     PartnersArea,
-    ImageContainer
+    ImageContainer,
+    BackgroundDetails
 } from './styles';
 
 const FeedbackAndPartners = () => {
@@ -40,6 +43,9 @@ const FeedbackAndPartners = () => {
 
     return (
         <Container>
+            <BackgroundDetails>
+                <Rectangle />
+            </BackgroundDetails>
             <Feedback>
                 <Content>
                     <Title>

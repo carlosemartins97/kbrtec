@@ -5,6 +5,8 @@ export const Container = styled.div`
     background-color: ${props => props.theme.colors.black};
     color: ${props => props.theme.colors.white};
 
+    position: relative;
+
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -121,4 +123,15 @@ export const LastInfo = styled.div`
     align-items: center;
 
     background: #000;
+`;
+
+export const BackgroundDetails = styled.div`
+    > :first-child{
+        > :last-child{
+            display: none;
+        }
+        div {
+            border: 2px solid rgba(25, 112, 129, 0.2);
+        }
+    }
 `;

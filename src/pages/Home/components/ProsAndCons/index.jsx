@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Rectangle from '../../../../core/components/Rectangle'
+import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground'
 
 import styleImg from '../../../../core/assets/business2.png'
 import prosImg from '../../../../core/assets/pros-and-cons/positive.png'
@@ -15,6 +16,7 @@ import {
     ContentProsAndCons,
     Pros,
     Cons,
+    BackgroundDetails,
 } from './styles';
 
 const ProsAndCons = () => {
@@ -23,6 +25,10 @@ const ProsAndCons = () => {
             <Rectangle>
                 <img src={styleImg} alt="Uma rapaz escalando uma montanha"/>
             </Rectangle>
+
+            <BackgroundDetails>
+                <TwoSquadsBackground/>
+            </BackgroundDetails>
 
             <ContentInfo>
                 <ContentTitle>

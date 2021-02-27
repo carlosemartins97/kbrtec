@@ -4,6 +4,9 @@ export const Container = styled.div`
     font-family: 'Oswald';
     letter-spacing: 0.2em;
 
+    position: relative;
+    z-index: 3;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +42,7 @@ export const ContentTitle = styled.h2`
     text-transform: uppercase;
 
     padding-bottom: 20px;
+
 `;
 
 
