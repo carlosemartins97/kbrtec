@@ -137,5 +137,6 @@ export const GridItem = styled.div`
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
+            text-align: center;
         }
 `;
