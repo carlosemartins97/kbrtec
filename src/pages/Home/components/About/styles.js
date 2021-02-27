@@ -5,6 +5,8 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
 
+    position: relative;
+
     padding: 20px;
 
     @media(max-width: 1024px){
@@ -35,6 +37,9 @@ export const TextContainer = styled.div`
     margin-left: 90px;
     margin-top: 20px;
     
+    position: relative;
+    z-index: 2;
+
     max-width: 600px;
 
     @media(max-width: 1024px){
@@ -111,7 +116,7 @@ export const Social = styled.div`
     }
 `;
 
-export const BackgroundDetails = styled.div`
+export const LeftBackgroundDetails = styled.div`
 
     >:first-child {
         width: 300px;
@@ -124,10 +129,10 @@ export const BackgroundDetails = styled.div`
     }
 `;
 
-export const RightDetails = styled.div`
+export const RightBackgroundDetails = styled.div`
     position: absolute;
-    right: -290%;
-    top: -30%;
+    right: -10%;
+    top: -20%;
     z-index: 0;
     > :first-child {
         position: absolute;
@@ -143,13 +148,19 @@ export const RightDetails = styled.div`
     }
 
     @media(max-width: 1280px){
-        right: -230%;
+        right: -25%;
     }
     @media(max-width: 1024px){
-        right: -130%;
+        right: -30%;
     }
     @media(max-width: 770px){
-        right: -100%;
+        right: -45%;
+    }
+    @media(max-width: 550px){
+        right: -60%;
+    }
+    @media(max-width: 450px){
+        right: -90%;
     }
 
 `;

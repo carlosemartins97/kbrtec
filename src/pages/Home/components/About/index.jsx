@@ -15,21 +15,17 @@ import {
     Subtitle,
     Description,
     Social,
-    BackgroundDetails,
-    RightDetails,
+    LeftBackgroundDetails,
+    RightBackgroundDetails,
 } from './styles';
 
 const About = () => {
     return (
         <Container>
             <ImgContainer>
-                <BackgroundDetails>
+                <LeftBackgroundDetails>
                     <Rectangle />
-                    <RightDetails>
-                        <Rectangle />
-                        <Rectangle />
-                    </RightDetails>
-                </BackgroundDetails>
+                </LeftBackgroundDetails>
                 <img src={aboutImg} alt="Foto da pessoa dona do site."/>
                 <Social>
                     <a href="https://www.facebook.com/kbrtec" target="_blank" rel="noreferrer"><img src={faceImg} alt="Foto da pessoa dona do site."/></a>
@@ -66,6 +62,10 @@ const About = () => {
 
             </TextContainer>
             
+            <RightBackgroundDetails>
+                <Rectangle />
+                <Rectangle />
+            </RightBackgroundDetails>
         </Container>
     );
 };

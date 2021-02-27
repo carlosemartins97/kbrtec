@@ -10,7 +10,6 @@ export const Container = styled.header`
 
     height: 100%;
     width: 100%;
-
 `;
 
 export const NavHeader = styled.div`
@@ -125,6 +124,7 @@ export const ContentHeader = styled.div`
     width: 100%;
 
     position: relative;
+    z-index: 3;
 
     display: flex;
     align-items: center;
