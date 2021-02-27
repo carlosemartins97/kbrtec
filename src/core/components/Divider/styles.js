@@ -9,6 +9,7 @@ export const Container = styled.div`
     min-height: 400px;
     background-color: ${props => props.theme.colors.black};
     
+    position: relative;
 
     display: flex;
     align-items: center;

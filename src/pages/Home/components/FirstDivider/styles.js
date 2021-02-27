@@ -62,3 +62,19 @@ export const TextArea = styled.div`
         padding: 20px 0;
     }
 `;
+
+export const BackgroundDetails = styled.div`
+    > :first-child {
+        position: absolute;
+        top: -13%;
+        right: 3%;
+        
+        border-radius: 20px;
+        @media(max-width: 1024px){
+            top: -10%;
+        }
+        @media(max-width: 770px){
+            display: none;
+        }
+    }
+`;

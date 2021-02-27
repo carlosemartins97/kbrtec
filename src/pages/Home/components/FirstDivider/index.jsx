@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Divider from '../../../../core/components/Divider';
+import Rectangle from '../../../../core/components/Rectangle';
 
 import Logo from '../../../../core/assets/logo2.png';
 
 import {
     ImageArea,
-    TextArea
+    TextArea,
+    BackgroundDetails
 } from './styles';
 
 const FirstDivider = () => {
@@ -30,6 +32,10 @@ const FirstDivider = () => {
                         PageMaker including versions of Lorem Ipsum.
                     </p>
                 </TextArea>
+                
+                <BackgroundDetails>
+                    <Rectangle />
+                </BackgroundDetails>
             </Divider>
     )
 }
