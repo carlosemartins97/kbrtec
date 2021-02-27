@@ -9,8 +9,11 @@ import {
     ContentSteps,
     Step,
     Description,
-    Subscribe
+    Subscribe,
+    LeftBackgroundDetails,
+    RightBackgroundDetails
 } from './styles';
+import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground';
 
 const RegistrationSteps = () => {
 
@@ -26,6 +29,10 @@ const RegistrationSteps = () => {
 
     return (
         <Container>
+            <LeftBackgroundDetails>
+                <TwoSquadsBackground />
+            </LeftBackgroundDetails>
+
             <ContentTitle>
                 Etapas da Inscrição
             </ContentTitle>
@@ -51,6 +58,10 @@ const RegistrationSteps = () => {
                     </Button>
                 </Subscribe>
             </ContentSteps>
+            
+            <RightBackgroundDetails>
+                <TwoSquadsBackground />
+            </RightBackgroundDetails>
         </Container>
     )
 }

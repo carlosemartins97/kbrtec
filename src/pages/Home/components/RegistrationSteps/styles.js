@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
     padding: 100px 50px;
+
+    position: relative;
+    z-index: 3;
 `;
 export const ContentTitle = styled.h2`
     font-family: 'Oswald';
@@ -16,6 +19,9 @@ export const ContentSteps = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+
+    position: relative;
+    z-index: 3;
     @media(max-width: 770px){
         grid-template-columns: repeat(3, 1fr);
     }
@@ -90,5 +96,17 @@ export const Subscribe = styled.div`
     > a {
         background: ${props => props.theme.colors.secondary};
         padding: 0px 30px;
+    }
+`;
+
+export const LeftBackgroundDetails = styled.div`
+    > :first-child {
+        top: -5%;
+    }
+`;
+export const RightBackgroundDetails = styled.div`
+    transform: rotate(180deg);
+    > :first-child {
+        bottom: 100%;
     }
 `;

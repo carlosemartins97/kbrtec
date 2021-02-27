@@ -17,9 +17,9 @@ import {
     Main,
     RectangleImage,
     RectangleBackgrounds,
-    BackgroundDetails,
     RectangleWhiteBackground,
 } from './styles';
+import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground';
 
 
 const Header = () => {
@@ -42,11 +42,7 @@ const Header = () => {
             </NavHeader>
 
             <ContentHeader>
-                <BackgroundDetails>
-                    <Rectangle/>
-                    <Rectangle/>
-                    <Rectangle/>
-                </BackgroundDetails>
+                <TwoSquadsBackground />
                 <ContentText>
                     <h1>
                         standard Lorem Ipsum <br/>
