@@ -6,7 +6,7 @@ export const Container = styled.div`
     background: url(${divisorImg});
     background-repeat: repeat;
     background-blend-mode: exclusion;
-    height: 100%;
+    min-height: 400px;
     background-color: ${props => props.theme.colors.black};
     
 

@@ -75,5 +75,6 @@ export const TextArea = styled.div`
     @media(max-width: 770px){
         flex: unset;
         width: 100%;
+        align-items: center;
     }
 `;
