@@ -1,8 +1,5 @@
 import React from 'react';
 
-import Rectangle from '../../../../../core/components/Rectangle';
-import correctImg from '../../../../../core/assets/correct.png';
-
 import {
     Container,
     FirstHalf,
@@ -14,6 +11,7 @@ import {
     ContentSubtitle,
     ContentInfo,
 } from './styles';
+import CorrectCircle from '../../../../../core/components/CorrectCircle';
 
 const LeftContent = () => {
 
@@ -51,7 +49,7 @@ const LeftContent = () => {
                     {ContentListInfo.map(item => {
                         return (
                             <ListItem key={item.msg}>
-                                <Rectangle><img src={correctImg} alt="Imagem com a letra V, insinuando algo correto."/></Rectangle> {item.msg}
+                                <CorrectCircle /> {item.msg}
                             </ListItem>
                         )
                     })}
@@ -70,7 +68,7 @@ const LeftContent = () => {
                         {InfoTranslationList.map(item => {
                             return (
                                 <ListItem key={item.msg}>
-                                    <Rectangle><img src={correctImg} alt="Imagem com a letra V, insinuando algo correto."/></Rectangle> {item.msg}
+                                    <CorrectCircle /> {item.msg}
                                 </ListItem>
                             )
                         })}

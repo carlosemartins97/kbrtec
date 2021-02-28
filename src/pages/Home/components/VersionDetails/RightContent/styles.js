@@ -69,23 +69,6 @@ export const ListItem = styled.li`
     align-items: center;
 
     > :first-child {
-        border-radius: 50%;
-        z-index: 0;
-        transform: rotate(0deg);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 20px;
-        height: 20px;
-
         margin-right: 10px;
-        > img {
-            width: 70%;
-            border-radius: 50%;
-            border: 1px solid green;
-            padding: 1px;
-        }
     }
 `;
