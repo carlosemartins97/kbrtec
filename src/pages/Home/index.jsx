@@ -1,7 +1,6 @@
 import React from 'react';
 
 import About from './components/About';
-
 import Header from './components/Header';
 import FirstInfo from './components/FirstInfo';
 import FirstDivider from './components/FirstDivider';
@@ -23,6 +22,7 @@ import {
 
 
 const Home = () => {
+
     return (
         <Container>
             <Header />

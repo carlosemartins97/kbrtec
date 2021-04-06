@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import Modal from 'react-modal';
 
 import Rectangle from '../../../../core/components/Rectangle';
 
@@ -23,9 +25,24 @@ import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground
 
 
 const Header = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    function handleOpenModal(){
+        setIsModalOpen(true)
+    }
+
+    function handleCloseModal(){
+        setIsModalOpen(false)
+    }
 
     return (
         <Container>
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={handleCloseModal}
+            >
+                <h2>Cadastrar</h2>
+            </Modal>
 
             <NavHeader>
                 <Rectangle >
@@ -33,12 +50,18 @@ const Header = () => {
                 </Rectangle>
 
                 <MoreInfo>
-                    <Button href="/">
+                    <button
+                        type="button"
+                        onClick={handleOpenModal}
+                    >
                         Mais informações
-                    </Button>
+                    </button>
 
                     <img src={imgInfo} alt=""/>
                 </MoreInfo>
+
+                
+
             </NavHeader>
 
             <ContentHeader>
