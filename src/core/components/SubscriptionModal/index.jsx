@@ -51,7 +51,7 @@ export function SubscriptionModal({onRequestClose, isOpen}){
                             <input type="text"/>
                         </label>
                     </form>
-                    <button>
+                    <button type="submit">
                         Concluir inscrição
                     </button>
                 </Content>

@@ -69,8 +69,8 @@ const Header = ({onOpenModal}) => {
 
                     </p>
 
-                    <Button href="/"> 
-                        Lorem ipsum idolor
+                    <Button href="/registration"> 
+                        Inscreva-se
                     </Button>
                 </ContentText>
 

@@ -52,7 +52,7 @@ export default createGlobalStyle`
         background: linear-gradient(90deg, #fff 80%, #e4e4e4);
         padding: 48px;
         position: relative;
-        border-radius: 4px;
+        border-radius: 8px;
 
         overflow: hidden;
 
