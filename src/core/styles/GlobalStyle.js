@@ -30,7 +30,7 @@ export default createGlobalStyle`
     }
 
     .react-modal-overlay {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.8);
 
         position: fixed;
         z-index: 5;

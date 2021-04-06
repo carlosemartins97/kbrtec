@@ -3,15 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    
-    > :first-child{
-        left: 80%;
-        bottom: 35%;
-        > :last-child {
-            display: none;
-        }
-    }
 `;
 
 
@@ -72,10 +63,79 @@ export const Content = styled.div`
         border-radius: 30px;
         
         padding: 0 20px;
+
+        transition: filter 0.2s;
         
         &:hover {
-                transition: opacity 0.3s;
-                opacity: .5;
+                filter: brightness(0.9); 
             }
+    }
+`;
+
+export const LeftDetails = styled.div`
+    >:first-child {
+        background: linear-gradient(
+            ${props => props.theme.colors.gradient.secondary}, 
+            ${props => props.theme.colors.gradient.primary}
+        );
+
+        position: absolute;
+        z-index: 1;
+
+        width: 400px;
+        height: 400px;
+        
+        left: -15%;
+        top: -10%;
+
+        border-radius: 30px;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+
+        > img {
+            transform: rotate(45deg);
+            margin-right: 80px;
+            margin-bottom: 80px;
+        }
+    }
+    >:last-child {
+        position: absolute;
+
+        bottom: 0%;
+        left: -5%;
+
+        width: 250px;
+        height: 250px;
+
+        border-radius: 30px;
+    }
+`;
+
+export const RightDetails = styled.div`
+    > :first-child{
+        left: 80%;
+        bottom: 35%;
+        > :last-child {
+            display: none;
+        }
+    }
+
+    > :last-child {
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        cursor: pointer;
+
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: .5;
+        }
     }
 `;
