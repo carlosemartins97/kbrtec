@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SubscriptionModal from '../../core/components/SubscriptionModal';
+
 import About from './components/About';
 import Header from './components/Header';
 import FirstInfo from './components/FirstInfo';
@@ -18,14 +20,26 @@ import Footer from './components/Footer';
 import {
     Container,
 } from './styles';
-
-
+import { useState } from 'react';
 
 const Home = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    function handleOpenModal(){
+        setIsModalOpen(true)
+    }
+
+    function handleCloseModal(){
+        setIsModalOpen(false)
+    }
 
     return (
         <Container>
-            <Header />
+            <Header onOpenModal={handleOpenModal} />
+            <SubscriptionModal 
+                isOpen={isModalOpen}
+                onRequestClose={handleCloseModal}
+            />
 
             <About />
 
