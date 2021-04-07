@@ -11,15 +11,33 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    >:last-child {
+        width: 100%;
+        padding: unset;
+        height: 98px;
+        
+
+        > :first-child{
+            height: 50px;
+            justify-content: center;
+            > :nth-child(1), >:nth-child(2)  {
+                display: none;
+            }
+        }
+    }
 `;
 
 export const RegistrationContainer = styled.div`
+    position: relative;
+
     background: black;
 
     width: 100%;
     max-width: 600px;
 
-    margin-top: 50px;
+    margin: 50px 0;
 
     display: flex;
     flex-direction: column;
@@ -34,16 +52,28 @@ export const Content = styled.div`
     width: 100%;
     max-width: 400px;
 
+    min-height: 811px;
+
     display: flex;
     flex-direction: column;
+
+    
 
     h1 {
         margin: 60px 0;
         text-align:center;
         text-transform: uppercase;
+
+        font-family: 'Oswald';
+        font-weight: 200;
+        font-size: 25px;
+        line-height: 37px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
     }
 
-    form {
+    form, > section {
         display: flex;
         flex-direction: column;
 
@@ -79,8 +109,26 @@ export const Content = styled.div`
         }
     }
 
-    a {
+    button {
         margin: 60px auto;
+
+        font-family: 'Source Sans Pro';
+        font-weight: bold;
+        line-height: 60px;
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        background: ${props => props.theme.colors.secondary};
+        
+        border-radius: 30px;
+        
+        padding: 0 20px;
+        
+        &:hover {
+            transition: opacity 0.3s;
+            opacity: .5;
+        }
 
     }
 `;
@@ -88,37 +136,68 @@ export const Content = styled.div`
 
 export const LogoContent = styled.div`
     > :first-child {
-            background: linear-gradient(
-                ${props => props.theme.colors.gradient.secondary}, 
-                ${props => props.theme.colors.gradient.primary}
-            );
+        background: linear-gradient(
+            ${props => props.theme.colors.gradient.secondary}, 
+            ${props => props.theme.colors.gradient.primary}
+        );
 
-            position: absolute;
+        position: absolute;
 
-            width: 300px;
-            height: 300px;
-            top: -25%;
-            left: 38.5%;
+        width: 300px;
+        height: 300px;
+        left: 25%;
+        top: -28%;
 
-            border-radius: 30px;
+        border-radius: 30px;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > a {
+            transform: rotate(45deg);
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex:1;
+            > img {
+                position: absolute;
+                
+                width: 70px;
 
-            > a {
-                transform: rotate(45deg);
-                display: flex;
-                flex:1;
-                > img {
-                    position: absolute;
-                    
-                    width: 70px;
-
-                    top: 30px;
-                    right: 115px;
-                }
+                top: 40px;
+                right: 115px;
             }
+        }
+    }
+`;
+
+
+export const Steps = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    > :nth-child(n) {
+        position: relative;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 200px;
+
+        p {
+            color: ${props => props.theme.colors.black};
+            transform: rotate(45deg);
+
+            font-family: 'Source Sans Pro';
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
     }
 `;
 
