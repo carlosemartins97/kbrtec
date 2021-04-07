@@ -1,5 +1,5 @@
 import Rectangle from '../../core/components/Rectangle';
-import Button from '../../core/components/Button';
+import TwoSquadsBackground from '../../core/components/TwoSquadsBackground';
 
 import Footer from '../Home/components/Footer'
 
@@ -55,12 +55,26 @@ function Registration(){
         console.log(userData);
     },[userData])
 
-    
+
     //validação de dados
     //mask
 
     return (
         <Container>
+            <LeftDetails>
+                {/* quadrado maior a esquerda do form */}
+                <Rectangle /> 
+                
+                {/* quadrado menor a esquerda do form */}
+                <Rectangle />
+
+                <TwoSquadsBackground />
+
+            </LeftDetails>
+
+            <RightDetails>
+             <TwoSquadsBackground />
+            </RightDetails>
             
             <RegistrationContainer>
                 <LogoContent>
@@ -68,6 +82,12 @@ function Registration(){
                         <a href="/"><img src={Logo} alt="Logo da empresa"/></a>
                     </Rectangle>
                 </LogoContent>
+
+
+                {/* quadrado da direita do form */}
+                <Rectangle />
+
+
                 <Content>
                     <Steps>
                         <Rectangle>

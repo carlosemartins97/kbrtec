@@ -31,6 +31,7 @@ export const Container = styled.section`
 
 export const RegistrationContainer = styled.div`
     position: relative;
+    z-index: 2;
 
     background: black;
 
@@ -46,6 +47,16 @@ export const RegistrationContainer = styled.div`
     border-radius: 55px;
 
     color: ${props => props.theme.colors.white}; 
+
+    > :nth-child(2) {
+
+        position: absolute;
+        bottom: 60px;
+        right: -8%;
+
+        border-radius: 15px;
+
+    }
 `;
 
 export const Content = styled.div`
@@ -202,8 +213,44 @@ export const Steps = styled.div`
 `;
 
 
-export const LeftDetails = styled.div``;
+export const LeftDetails = styled.div`
+    >:first-child{
+        position: absolute;
+
+        width: 200px;
+        height: 200px;
+
+        top: 50%;
+        left: 20%;
+
+        border-radius: 15px;
+    }
+
+    > :nth-child(2) {
+        position: absolute;
+
+        top: 30%;
+        left: 15%;
+
+        border-radius: 15px;
+    }
+
+    > :last-child {
+        bottom: 20%;
+        > :last-child {
+            display: none;
+        }
+    }
+`;
 
 
-export const RightDetails = styled.div``;
+export const RightDetails = styled.div`
+    > :first-child{
+        left: 93%;
+        top: 0%;
+        > :last-child {
+            display: none;
+        }
+    }
+`;
 
