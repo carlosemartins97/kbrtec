@@ -91,6 +91,28 @@ export const Content = styled.div`
         text-transform: uppercase;
         font-size: 13px;
 
+        > div {
+            display: flex;
+            align-items: center;
+
+            >:first-child {
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+
+                transition: filter 0.2s;
+                
+                &:hover {
+                    filter: brightness(0.5);
+                }
+            }
+
+            h1 {
+                flex:1;
+            }
+
+        }
+
         label {
             display: flex;
             flex-direction: column;
@@ -210,6 +232,22 @@ export const Steps = styled.div`
             text-transform: uppercase;
         }
     }
+
+    > :nth-child(2) {
+        background: ${props => props.step === 1 ? props.theme.colors.black : props.theme.colors.secondary};
+        border: 1px solid ${props => props.theme.colors.secondary};
+        p {
+            color: ${props => props.step === 1 ? props.theme.colors.white : props.theme.colors.black};
+        }
+    }   
+
+    > :nth-child(3) {
+        background: ${props => props.step === 2 || props.step === 1 ? props.theme.colors.black : props.theme.colors.secondary};
+        border: 1px solid ${props => props.theme.colors.secondary};
+        p {
+            color: ${props => props.step === 2 || props.step === 1 ? props.theme.colors.white : props.theme.colors.black};
+        }
+    }    
 `;
 
 
