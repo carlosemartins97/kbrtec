@@ -8,6 +8,8 @@ export const Container = styled.section`
 
     width: 100%;
 
+    overflow: hidden;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +34,8 @@ export const Container = styled.section`
 export const RegistrationContainer = styled.div`
     position: relative;
     z-index: 2;
+
+    padding: 0 1rem;
 
     background: black;
 
@@ -233,12 +237,57 @@ export const Steps = styled.div`
         }
     }
 
+    > :nth-child(1) {
+        position: relative;
+        >:last-child {
+            transform: rotate(-45deg);
+            top: -100%;
+            left: -100%;
+            > :last-child {
+                display: none;
+            }
+            > :nth-child(n) {
+                width: 100px;
+                height: 100px;
+                border-radius: 15px;
+            }
+        }
+    }
+
     > :nth-child(2) {
+        position: relative;
         background: ${props => props.step === 1 ? props.theme.colors.black : props.theme.colors.secondary};
         border: 1px solid ${props => props.theme.colors.secondary};
         p {
             color: ${props => props.step === 1 ? props.theme.colors.white : props.theme.colors.black};
         }
+        &::after {
+            content: '';
+            transform: rotate(45deg);
+
+            width: 200%;
+            height: 4px;
+            background: linear-gradient(to right, #ddd, #bbb);
+
+            position: absolute;
+            right: -80px;
+            bottom: -48px;
+
+        }
+        &::before {
+            content: '';
+            transform: rotate(45deg);
+
+            width: 200%;
+            height: 4px;
+            background: linear-gradient(to right, #ddd, #bbb);
+
+            position: absolute;
+            left: -80px;
+            top: -40px;
+
+        }
+
     }   
 
     > :nth-child(3) {
@@ -275,17 +324,6 @@ export const LeftDetails = styled.div`
 
     > :last-child {
         bottom: 20%;
-        > :last-child {
-            display: none;
-        }
-    }
-`;
-
-
-export const RightDetails = styled.div`
-    > :first-child{
-        left: 93%;
-        top: 0%;
         > :last-child {
             display: none;
         }

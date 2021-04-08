@@ -14,7 +14,6 @@ import {
     LogoContent,
     Steps,
     LeftDetails,
-    RightDetails,
 } from './styles';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -81,9 +80,7 @@ function Registration(){
 
             </LeftDetails>
 
-            <RightDetails>
-             <TwoSquadsBackground />
-            </RightDetails>
+
             
             <RegistrationContainer>
                 <LogoContent>
@@ -101,6 +98,7 @@ function Registration(){
                     <Steps step={step}>
                         <Rectangle>
                             <p>✓</p>
+                            <TwoSquadsBackground />
                         </Rectangle>
 
                         <Rectangle>
