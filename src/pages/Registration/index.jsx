@@ -1,11 +1,13 @@
 import Rectangle from '../../core/components/Rectangle';
 import TwoSquadsBackground from '../../core/components/TwoSquadsBackground';
 
-import {IoIosArrowBack} from 'react-icons/io';
-
 import Footer from '../Home/components/Footer'
+import MaskedInput from '../../core/components/MaskedInput';
 
+import {IoIosArrowBack} from 'react-icons/io';
 import Logo from '../../core/assets/logo1.png';
+
+import {Redirect} from 'react-router-dom';
 
 import {
     Container,
@@ -17,10 +19,11 @@ import {
 } from './styles';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import MaskedInput from '../../core/components/MaskedInput';
+import Button from '../../core/components/Button';
 
 function Registration(){
     const [step, setStep] = useState(1);
+    const [isRegistrationDone, setIsRegistrationDone] = useState(false);
 
     const [userData, setUserData] = useState({});
     const [name, setName] = useState('');
@@ -38,7 +41,6 @@ function Registration(){
                 phone
             });
             setStep(2);
-            console.log(userData);
         } else if(step === 2){
             setUserData({ 
                 ...userData, 
@@ -49,14 +51,17 @@ function Registration(){
             setStep(3);
         }
     }
-    //implementar botao de voltar
+
+    useEffect(() => {
+        if(step === 3){
+            console.log(userData);
+            setIsRegistrationDone(true);
+        }
+    },[step])
+
     function handleBack(){
         setStep(1);
     }
-
-    useEffect(() => {
-        console.log(userData);
-    },[userData])
 
     
     // function handleSubmit(event) {
@@ -64,7 +69,6 @@ function Registration(){
     // }
 
     //validação de dados
-    //mask
     //trabalhar responsividade
     
 
@@ -141,7 +145,7 @@ function Registration(){
                                         <label>celular
                                             <MaskedInput 
                                                 placeholder="EX: (13) 9 9999-9999" 
-                                                mask="(99) 9 9999-9999" 
+                                                mask="(99) 9 9999-9999"
                                                 value={phone} 
                                                 onChange={(e) => setPhone(e.target.value)}
                                             />
@@ -170,7 +174,7 @@ function Registration(){
                                             </label>
 
                                             <label>Estado
-                                                <input type="text" placeholder="EX: SP" value={state} onChange={(e) => setState(e.target.value)}/>
+                                                <input type="text" placeholder="EX: São Paulo" value={state} onChange={(e) => setState(e.target.value)}/>
                                             </label>
                                             </>
                                         )
@@ -188,6 +192,7 @@ function Registration(){
                         ) : (
                             <section>
                                 <h1>Obrigado por se registrar!</h1>
+                                <Button href="/">Voltar para home</Button>
                             </section>
                         )
                     }

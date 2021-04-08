@@ -12,10 +12,17 @@ import {
     RightDetails,
     LeftDetails
 } from './styles';
+import MaskedInput from '../MaskedInput';
+import { useState } from 'react';
 
 Modal.setAppElement('#root');
 
 export function SubscriptionModal({onRequestClose, isOpen}){
+
+    const [cpf, setCpf] = useState('');
+    const [phone, setPhone] = useState('');
+    const [name, setName] = useState('');
+
     return (
         <Modal
             isOpen={isOpen}
@@ -42,13 +49,21 @@ export function SubscriptionModal({onRequestClose, isOpen}){
                     PRESENTE ESPECIAL PARA VOCÊ</h1>
                     <form>
                         <label> SEU NOME: 
-                            <input type="text"/>
+                            <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
                         </label>
                         <label> TELEFONE:  
-                            <input type="text"/>
+                            <MaskedInput 
+                                mask="(99) 9 9999-9999"
+                                value={phone} 
+                                onChange={(e) => setPhone(e.target.value)}
+                            />
                         </label>
                         <label> CPF: 
-                            <input type="text"/>
+                            <MaskedInput 
+                                mask="999-999-999-99" 
+                                value={cpf} 
+                                onChange={(e) => setCpf(e.target.value)}
+                            />
                         </label>
                     </form>
                     <button type="submit">

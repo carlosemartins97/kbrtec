@@ -144,6 +144,11 @@ export const Content = styled.div`
             }
 
         }
+
+        a {
+            text-align: center;
+            color: ${props => props.theme.colors.black};
+        }
     }
 
     button {
@@ -266,26 +271,24 @@ export const Steps = styled.div`
             transform: rotate(45deg);
 
             width: 200%;
-            height: 4px;
-            background: linear-gradient(to right, #ddd, #bbb);
+            height: 1px;
+            background: linear-gradient(to right, #eee, #aaa);
 
             position: absolute;
             right: -80px;
             bottom: -48px;
-
         }
         &::before {
             content: '';
             transform: rotate(45deg);
 
             width: 200%;
-            height: 4px;
-            background: linear-gradient(to right, #ddd, #bbb);
+            height: 1px;
+            background: linear-gradient(to right, #eee, #aaa);
 
             position: absolute;
             left: -80px;
             top: -40px;
-
         }
 
     }   
