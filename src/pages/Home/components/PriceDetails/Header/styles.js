@@ -24,9 +24,14 @@ export const Container = styled.div`
         justify-content: center;
 
         border-radius: 34px;
+        transition: transform 0.5s;
 
         > img {
             transform: rotate(45deg);
+        }
+
+        &:hover {
+            transform: rotate(315deg);
         }
     }
 

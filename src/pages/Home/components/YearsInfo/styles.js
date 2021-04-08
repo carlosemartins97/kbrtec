@@ -129,6 +129,7 @@ export const Dollar = styled.div`
     line-height: 60px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    cursor: default;
 
 
     > span {
@@ -154,7 +155,15 @@ export const Dollar = styled.div`
         -webkit-text-stroke-width: 2px;
 
         opacity: 0.4;
+
+        transition: transform 0.5s;
+
+        &:hover {
+        transform: scale(1.5);
     }
+    }
+
+    
 `;
 
 export const List = styled.ul`
@@ -171,7 +180,6 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
     color: ${props => props.theme.colors.secondary};
-
     padding: 25px 0;
 `;
 
@@ -179,6 +187,9 @@ export const ListContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    
+    transition: transform 0.3s;
+    cursor: default;
 
     > span {
         font-size: 25px;
@@ -196,6 +207,10 @@ export const ListContent = styled.div`
         line-height: 37px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
+    }
+
+    &:hover {
+        transform: translateX(20px);
     }
 
     @media(max-width: 500px){

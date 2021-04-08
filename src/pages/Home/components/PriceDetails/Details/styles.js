@@ -42,6 +42,8 @@ export const Formation = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
+    transition: transform 0.3s;
+
 
     > :first-child {
         border-radius: 50%;
@@ -62,6 +64,11 @@ export const Formation = styled.div`
 
             padding: 15px;
         }
+    }
+
+    &:hover {
+        transform: translateY(10px);
+        cursor: pointer;
     }
 
 `;
@@ -166,8 +173,15 @@ export const ExampleItem = styled.li`
 
     margin: 50px 0;
 
+    transition: transform 0.2s;
+
     > p {
         margin-left: 10px;
     }
+
+    &:hover {
+        transform: translateX(15px);
+    }
+    
 `;
 

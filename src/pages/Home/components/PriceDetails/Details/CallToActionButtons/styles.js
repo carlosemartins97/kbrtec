@@ -29,10 +29,12 @@ export const FirstOfferButton = styled.a`
     background: ${props => props.theme.colors.warning};
     border-radius: 20px;
 
+    transition: transform 0.2s;
+
     &:hover {
-        transition: opacity .3s;
-        opacity: .7;
+        transform: scaleY(1.1);
     }
+
     @media(max-width: 770px){
         margin-bottom: 20px;
     }
@@ -59,6 +61,8 @@ export const SecondOfferButton = styled.a`
     max-width: 600px;
     height: 200px;
 
+    transition: transform 0.2s;
+
     > span {
         color: ${props => props.theme.colors.warning};
     }
@@ -70,10 +74,10 @@ export const SecondOfferButton = styled.a`
 
         color: ${props => props.theme.colors.black};
     }
+    
 
     &:hover {
-        transition: opacity .3s;
-        opacity: .5;
+        transform: scaleY(1.1);
     }
 
     @media(max-width: 550px){

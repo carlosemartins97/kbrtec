@@ -36,6 +36,8 @@ export const RightContent = styled.div`
     justify-content: center;
     align-items: center;
 
+    
+
     > h2 {
 
         max-width: 340px;
@@ -51,6 +53,16 @@ export const RightContent = styled.div`
         text-align: right;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+
+        transition: transform 0.2s;
+    }
+
+    img {
+        transition: transform 0.2s;
+    }
+
+    img:hover, h2:hover {
+        transform: scale(1.2);
     }
 
     @media(max-width: 1024px){

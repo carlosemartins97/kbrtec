@@ -24,6 +24,9 @@ export const ContentTitle = styled.div`
     align-items: center;
     flex: 1;
 
+    transition: transform 0.3s;
+    cursor: default;
+
     > :first-child {
         border-radius: 34px;
         width: 180px;
@@ -48,6 +51,11 @@ export const ContentTitle = styled.div`
         letter-spacing: 0.1em;
         text-transform: uppercase;
     }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
     @media(max-width: 1050px){
         flex-direction: column;
 
@@ -114,7 +122,7 @@ export const GridItem = styled.div`
     flex-direction: column;
 
     margin: 0 20px;
-
+    transition: transform 0.3s;
 
     > :first-child {
         width: 115px;
@@ -132,11 +140,16 @@ export const GridItem = styled.div`
     }
 
     > span {
-            margin: 40px;
-            font-family: 'Fira Sans';
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
-            text-align: center;
-        }
+        margin: 40px;
+        font-family: 'Fira Sans';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+    
 `;

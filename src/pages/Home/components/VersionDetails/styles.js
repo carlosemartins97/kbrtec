@@ -37,6 +37,15 @@ export const Container = styled.section`
         }
     }
 
+    li {
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateX(20px);
+            cursor: pointer;
+        }
+    }
+
     @media(max-width: 770px){
         flex-direction: column;
     }

@@ -56,7 +56,7 @@ const Details = () => {
                             </FormationSubtitle>
 
                             <FormationPrice>
-                                {item.price}
+                                R${item.price}
                             </FormationPrice>
                         </Formation>
                     )

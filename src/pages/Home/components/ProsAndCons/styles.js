@@ -27,8 +27,14 @@ export const Container = styled.section`
 
         border-radius: 34px;
 
+        transition: transform 0.5s;
+
         > img {
             transform: rotate(45deg);
+        }
+
+        &:hover {
+            transform: rotate(315deg);
         }
     }
 
@@ -103,6 +109,8 @@ export const ContentProsAndCons = styled.div`
 export const Pros = styled.div`
     margin-right: 15px;
 
+    transition: transform 0.2s;
+
     > p {
         background-color: ${props => props.theme.colors.secondary};
 
@@ -112,10 +120,17 @@ export const Pros = styled.div`
         margin-right: 0;
         margin-bottom: 15px;
     }
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: default;
+    }
 `;
 
 export const Cons = styled.div`
     margin-left: 15px;
+
+    transition: transform 0.2s;
 
     > p {
         background-color: ${props => props.theme.colors.warning};
@@ -123,6 +138,11 @@ export const Cons = styled.div`
     @media(max-width: 770px){
         margin-left: 0;
         margin-top: 15px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: default;
     }
 `;
 
