@@ -17,6 +17,7 @@ import {
 } from './styles';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import MaskedInput from '../../core/components/MaskedInput';
 
 function Registration(){
     const [step, setStep] = useState(1);
@@ -138,7 +139,12 @@ function Registration(){
                                         </label>
 
                                         <label>celular
-                                            <input type="text" placeholder="EX: 13999999999" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                                            <MaskedInput 
+                                                placeholder="EX: (13) 9 9999-9999" 
+                                                mask="(99) 9 9999-9999" 
+                                                value={phone} 
+                                                onChange={(e) => setPhone(e.target.value)}
+                                            />
                                         </label>
                                         </>
                                     )}
@@ -151,7 +157,12 @@ function Registration(){
                                                 <h1>Crie sua conta</h1>
                                             </div>
                                             <label>CPF
-                                                <input type="text" placeholder="EX: 01234567890" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
+                                                <MaskedInput 
+                                                    placeholder="EX: 123-456-789-10" 
+                                                    mask="999-999-999-99" 
+                                                    value={cpf} 
+                                                    onChange={(e) => setCpf(e.target.value)}
+                                                />
                                             </label>
 
                                             <label>Cidade
