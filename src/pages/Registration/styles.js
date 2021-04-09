@@ -29,6 +29,10 @@ export const Container = styled.section`
             }
         }
     }
+
+    @media(max-width: 550px) {
+        padding: 0 20px;
+    }
 `;
 
 export const RegistrationContainer = styled.div`
@@ -37,7 +41,7 @@ export const RegistrationContainer = styled.div`
 
     padding: 0 1rem;
 
-    background: black;
+    background: ${props => props.theme.colors.black};
 
     width: 100%;
     max-width: 600px;
@@ -60,7 +64,17 @@ export const RegistrationContainer = styled.div`
 
         border-radius: 15px;
 
+        @media(max-width: 550px){
+            right: -10%;
+        }
+        @media(max-width: 450px){
+            right: -13%;
+        }
     }
+
+    @media(max-width: 550px){
+        border-radius: 30px;
+    }  
 `;
 
 export const Content = styled.div`
@@ -72,6 +86,9 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media(max-width: 550px){
+        padding: 0 20px;
+    } 
     
 
     h1 {
@@ -204,7 +221,18 @@ export const LogoContent = styled.div`
                 right: 115px;
             }
         }
+        @media(max-width: 550px) {
+            left: 20%;
+        }
+        @media(max-width: 450px) {
+            left: 10%;
+        }
+        @media(max-width: 380px) {
+            left: 5%;
+        }
     }
+
+    
 `;
 
 
@@ -272,6 +300,18 @@ export const Steps = styled.div`
             position: absolute;
             right: -80px;
             bottom: -48px;
+
+            @media(max-width: 550px) {
+                width: 100%;
+                right: -40px;
+                bottom: -25px;
+            }
+
+            @media(max-width: 470px) {
+                width: 50%;
+                right: -20px;
+                bottom: -15px;
+            }
         }
         &::before {
             content: '';
@@ -284,6 +324,17 @@ export const Steps = styled.div`
             position: absolute;
             left: -80px;
             top: -40px;
+
+            @media(max-width: 550px) {
+                width: 100%;
+                left: -50px;
+                top: -30px;
+            }
+            @media(max-width: 470px) {
+                width: 50%;
+                left: -30px;
+                top: -20px;
+            }
         }
 
     }   
@@ -294,7 +345,11 @@ export const Steps = styled.div`
         p {
             color: ${props => props.step === 2 || props.step === 1 ? props.theme.colors.white : props.theme.colors.black};
         }
-    }    
+    }  
+
+    @media(max-width: 550px){
+        justify-content: space-around;
+    }  
 `;
 
 
