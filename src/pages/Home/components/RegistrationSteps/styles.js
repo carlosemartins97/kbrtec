@@ -7,11 +7,8 @@ export const Container = styled.section`
     z-index: 3;
 `;
 export const ContentTitle = styled.h2`
-    font-family: 'Oswald';
     font-size: 25px;
     line-height: 37px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     text-align: center;
 
 `;
@@ -74,8 +71,6 @@ export const Description = styled.span`
     margin-top: 40px;
 
     font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: normal;
     font-size: 15px;
     line-height: 119%;
     text-align: center;

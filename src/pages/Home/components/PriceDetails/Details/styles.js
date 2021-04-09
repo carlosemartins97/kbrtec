@@ -97,13 +97,8 @@ export const FormationSubtitle = styled.span`
 
 export const FormationPrice = styled.h2`
     padding-top: 10px;
-
-    font-family: 'Oswald';
     font-size: 25px;
-
     line-height: 37px;
-
-    text-transform: uppercase;
 `;
 
 export const ContentDetails = styled.div`
@@ -137,11 +132,8 @@ export const DescriptionDetails = styled.div`
     margin-right: 20px;
 
     > h2 {
-        font-family: 'Oswald';
         font-size: 25px;
         line-height: 30px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
     }
 
     > p {

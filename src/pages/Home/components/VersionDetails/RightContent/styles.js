@@ -20,11 +20,9 @@ export const ContentSubtitle = styled.h3`
 
     padding: 20px 0;
 
-    font-family: 'Oswald';
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
 
     color: ${props => props.theme.colors.secondary};
     @media(max-width: 500px){
@@ -34,8 +32,6 @@ export const ContentSubtitle = styled.h3`
 `;
 
 export const ContentInfo = styled.p`
-    font-family: 'Fira Sans';
-    font-size: 15px;
     line-height: 136.5%;
 
     padding-bottom: 20px;

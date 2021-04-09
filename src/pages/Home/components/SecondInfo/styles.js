@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const Container = styled.section`
     padding: 100px 50px;
 `;
@@ -43,13 +41,8 @@ export const ContentTitle = styled.div`
     > h2 {
         width: 300px;
         margin: 0 100px;
-
-        font-family: 'Oswald';
-        font-weight: bold;
         font-size: 25px;
         line-height: 37px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
     }
 
     &:hover {
@@ -74,10 +67,6 @@ export const ContentDescription = styled.div`
 
     > p {
             width: 500px;
-            font-family: Fira Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 15px;
             line-height: 180%;
         }
 
@@ -91,12 +80,10 @@ export const Grid = styled.div`
 `;
 
 export const GridTitle = styled.h3`
-    font-family: 'Oswald';
     font-size: 18px;
     line-height: 27px;
     text-align: center;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
 
     padding-top: 50px;
 `;

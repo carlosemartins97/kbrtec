@@ -77,15 +77,10 @@ export const Content = styled.div`
     h1 {
         margin: 60px 0;
         text-align:center;
-        text-transform: uppercase;
 
-        font-family: 'Oswald';
         font-weight: 200;
         font-size: 25px;
         line-height: 37px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-
     }
 
     form, > section {

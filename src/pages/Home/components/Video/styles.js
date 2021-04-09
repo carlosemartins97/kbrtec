@@ -15,12 +15,10 @@ export const ContentTitle = styled.h2`
 
     margin: 100px 0;
 
-    font-family: 'Oswald';
     font-size: 18px;
     line-height: 27px;
     text-align: center;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
 
     color: ${props => props.theme.colors.white};
     @media(max-width: 550px){

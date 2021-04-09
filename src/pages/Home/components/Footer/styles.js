@@ -28,8 +28,6 @@ export const Content = styled.div`
 
 export const Address = styled.div`
     > p, > address {
-        font-family: Fira Sans;
-        font-style: normal;
         font-size: 13px;
         line-height: 160%;
         text-align: center;

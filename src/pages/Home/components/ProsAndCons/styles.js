@@ -49,16 +49,12 @@ export const ContentInfo = styled.div`
 `;
 
 export const ContentTitle = styled.h2`
-    font-family: 'Oswald';
     font-size: 25px;
     line-height: 155.5%;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
 `;
 
 
 export const ContentDescription = styled.p`
-    font-size: 15px;
     line-height: 136.5%;
     text-align: center;
 
@@ -70,11 +66,9 @@ export const ContentDescription = styled.p`
 export const ContentSubtitle = styled.h3`
     color: ${props => props.theme.colors.secondary};
     
-    font-family: 'Oswald';
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
 `;
 
 export const ContentProsAndCons = styled.div`

@@ -7,8 +7,6 @@ import MaskedInput from '../../core/components/MaskedInput';
 import {IoIosArrowBack} from 'react-icons/io';
 import Logo from '../../core/assets/logo1.png';
 
-import {Redirect} from 'react-router-dom';
-
 import {
     Container,
     RegistrationContainer,
@@ -23,7 +21,6 @@ import Button from '../../core/components/Button';
 
 function Registration(){
     const [step, setStep] = useState(1);
-    const [isRegistrationDone, setIsRegistrationDone] = useState(false);
 
     const [userData, setUserData] = useState({});
     const [name, setName] = useState('');
@@ -55,9 +52,8 @@ function Registration(){
     useEffect(() => {
         if(step === 3){
             console.log(userData);
-            setIsRegistrationDone(true);
         }
-    },[step])
+    },[step, userData])
 
     function handleBack(){
         setStep(1);

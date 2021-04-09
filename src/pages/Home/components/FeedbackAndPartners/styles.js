@@ -67,8 +67,7 @@ export const Title = styled.h2`
 
     font-size: 25px;
     line-height: 37px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+
 
     @media(max-width: 770px){
         text-align: center;

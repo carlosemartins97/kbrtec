@@ -5,11 +5,8 @@ export const Container = styled.section`
     flex: 1;
 
     h2 {
-        font-family: 'Oswald';
         font-size: 25px;
         line-height: 37px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
     }
 
      h2, span {

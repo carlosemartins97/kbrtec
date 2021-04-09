@@ -43,11 +43,7 @@ export const Container = styled.div`
 export const ContentTitle = styled.h2`
     font-size: 25px;
     line-height: 37px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
     padding-bottom: 20px;
-
 `;
 
 
@@ -55,8 +51,6 @@ export const ContentSubtitle = styled.h3`
     font-size: 18px;
     line-height: 27px;
     text-align: center;
-    text-transform: uppercase;
-
     padding-bottom: 40px;
 `;
 

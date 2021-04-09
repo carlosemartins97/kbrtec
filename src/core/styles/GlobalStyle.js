@@ -16,6 +16,17 @@ export default createGlobalStyle`
         outline:0;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Oswald';
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: 'Fira Sans';
+        font-size: 15px;
+    }
+
     a {
         text-decoration: none;
         color: ${props => props.theme.colors.black};

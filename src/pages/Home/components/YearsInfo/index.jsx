@@ -71,10 +71,10 @@ const YearsInfo = () => {
                                     <ListItem key={item.year}>
                                         <ListContent>
                                             <span>...</span>
-                                            <p>{item.year}</p>
+                                            <h2>{item.year}</h2>
                                             <InfoListItem>
                                                 <small>{item.description}</small>
-                                                <span>{item.price}</span>
+                                                <h3>{item.price}</h3>
                                             </InfoListItem>
                                         </ListContent>
                                     </ListItem>

@@ -9,24 +9,14 @@ export const ImageArea = styled.div`
 
     > h2 {
         margin-left: 40px;
-
         color: ${props => props.theme.colors.white};
-
-        font-family: 'Oswald';
-
         font-size: 25px;
-
-        line-height: 155.5%;
-        letter-spacing: 0.1em;
-
-        text-transform: uppercase;
     }
 
     @media(max-width: 1024px){
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         margin: unset;
 
         > img {
@@ -46,11 +36,7 @@ export const TextArea = styled.div`
     > p {
         color: ${props => props.theme.colors.white};
 
-        font-family: Fira Sans;
-        font-style: normal;
         font-weight: 600;
-        font-size: 15px;
-
         line-height: 180%;
         
         > span {

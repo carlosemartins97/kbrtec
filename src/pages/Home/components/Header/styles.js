@@ -171,15 +171,9 @@ export const ContentText = styled.div`
     z-index: 1;
 
     >h1 {
-        font-family: 'Oswald';
         font-size: 30px;
         line-height: 155.5%;
-        /* or 47px */
         max-width: 550px;
-
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-
         > span {
             background-color: ${props => props.theme.colors.black};
             color: ${props => props.theme.colors.secondary};
@@ -189,10 +183,6 @@ export const ContentText = styled.div`
     }
 
     > p {
-        font-family: 'Fira Sans';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
         line-height: 180%;
         margin: 25px 0;
         width: 550px;

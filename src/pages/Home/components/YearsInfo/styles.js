@@ -26,30 +26,17 @@ export const LeftContent = styled.div`
     color: ${props => props.theme.colors.white};
 
     > h2 { 
+        display: flex;
         margin-bottom: 100px;
 
-        display: flex;
-
-        font-family: Oswald;
-        font-style: normal;
-        font-weight: bold;
         font-size: 25px;
         line-height: 155.5%;
-        /* or 39px */
-
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
     }
 
     > p {
         max-width: 500px;
         margin-top: 15px;
-
-        font-family: Fira Sans;
-        font-style: normal;
-        font-size: 15px;
         line-height: 180%;
-
         > span {
             color: ${props => props.theme.colors.secondary};
         }
@@ -91,12 +78,8 @@ export const InfoHeader = styled.div`
 
         max-width: 415px;
 
-        font-family: Oswald;
         font-size: 25px;
         line-height: 155.5%;
-
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
     }
     @media(max-width: 500px){
         flex-direction: column;
@@ -126,9 +109,7 @@ export const Dollar = styled.div`
     font-weight: 500;
     font-size: 50px;
 
-    line-height: 60px;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
     cursor: default;
 
 
@@ -199,14 +180,10 @@ export const ListContent = styled.div`
         -webkit-text-fill-color: transparent;
     }
 
-    > p {
-        font-family: 'Oswald';
-        font-weight: bold;
+    > h2 {
         font-size: 25px;
-
         line-height: 37px;
         letter-spacing: 0.2em;
-        text-transform: uppercase;
     }
 
     &:hover {
@@ -232,13 +209,10 @@ export const InfoListItem = styled.div`
         line-height: 180%;
     }
 
-    > span {
-        font-family: 'Oswald';
-        font-weight: bold;
+    > h3 {
         font-size: 18px;
         line-height: 27px;
         letter-spacing: 0.005em;
-        text-transform: uppercase;
     }
 `;
 
