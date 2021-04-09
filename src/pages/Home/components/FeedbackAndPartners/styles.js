@@ -89,9 +89,11 @@ export const VideoArea = styled.div`
     display: flex;
     flex-direction:  column;
     justify-content: center;
+
     
     > img {
         padding: 10px 0;
+
     }
     @media(max-width: 1465px){
             text-align:center;
@@ -101,14 +103,42 @@ export const VideoArea = styled.div`
 export const PartnersArea = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 100px;
-    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+    grid-column-gap: 20px;
+
+    > :nth-child(3n + 2){
+        margin-top: 60px;
+    }
+
+    > :nth-child(7){
+        grid-column: 2 / 3;
+        margin-top: 60px;
+    }
+
+    > :nth-child(8){
+        margin-top: 0px;
+    }
+
+    
 
     @media(max-width: 1465px){
         grid-template-columns: repeat(1, 1fr);
         justify-items:center;
         grid-row-gap: 10px;
         grid-column-gap: 0;
+
+        > :nth-child(3n + 2){
+             margin-top: 0px;
+        }
+
+        > :nth-child(7){
+            grid-column: unset;
+            margin-top: 0px;
+        }
+
+        > :nth-child(8){
+            margin-top: 0px;
+        }
     }
 
 `;
@@ -125,9 +155,21 @@ export const ImageContainer = styled.div`
     width: 150px;
     height: 180px;
 
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translateY(-20px);
+    }
+
     @media(max-width: 1465px){
         width: 100%;
         height: 125px;
+
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateX(20px);
+        }
     }
 `;
 
