@@ -7,6 +7,9 @@ export const Container = styled.div`
 
 
 export const Content = styled.div`
+    position: relative;
+    z-index: 3;
+
     max-width: 430px;
     margin: 0 auto;
 
@@ -28,6 +31,8 @@ export const Content = styled.div`
 
         label {
             font-weight: 700;
+            display: flex;
+            justify-content: space-between;
             
             & + label {
                 margin-top: 40px;
@@ -39,6 +44,7 @@ export const Content = styled.div`
                 background: transparent;
                 width: 100%;
                 max-width: 300px;
+                border: 1px solid #aaa;
             }
 
         }
@@ -70,6 +76,16 @@ export const Content = styled.div`
                 filter: brightness(0.9); 
             }
     }
+
+    @media(max-width: 1000px){
+        padding-top: 110px;
+    }
+
+    @media(max-width: 550px){
+        label {
+            flex-direction:column;
+        }
+    }
 `;
 
 export const LeftDetails = styled.div`
@@ -99,6 +115,33 @@ export const LeftDetails = styled.div`
             transform: rotate(45deg);
             margin-right: 80px;
             margin-bottom: 80px;
+        }
+
+        @media(max-width: 1150px) {
+            width: 300px;
+            height: 300px;
+            top: 5%;
+            left: -10%;
+            > img {
+                margin-right: 50px;
+                margin-bottom: 50px;
+            }
+        }
+
+        @media(max-width: 1000px){
+            top: -25%;
+            left: 0%;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            > img {
+                margin-left: -95px;
+                margin-bottom: 20px;
+                
+                width: 70px;
+
+            }
         }
     }
     >:last-child {

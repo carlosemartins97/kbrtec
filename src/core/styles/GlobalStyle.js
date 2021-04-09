@@ -62,10 +62,14 @@ export default createGlobalStyle`
         max-height: 500px;
         background: linear-gradient(90deg, #fff 80%, #e4e4e4);
         padding: 48px;
+        margin: 0 16px;
         position: relative;
         border-radius: 8px;
 
         overflow: hidden;
 
+        @media(max-width: 1000px){
+            max-height: 770px;
+        }
     }
 `;
