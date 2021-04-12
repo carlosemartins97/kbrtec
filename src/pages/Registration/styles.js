@@ -294,8 +294,9 @@ export const Steps = styled.div`
             transform: rotate(45deg);
 
             width: 200%;
+            border-bottom: 3px dotted #eee;
             height: 1px;
-            background: linear-gradient(to right, #eee, #aaa);
+            
 
             position: absolute;
             right: -80px;
@@ -318,8 +319,8 @@ export const Steps = styled.div`
             transform: rotate(45deg);
 
             width: 200%;
+            border-bottom: 3px dotted #eee;
             height: 1px;
-            background: linear-gradient(to right, #eee, #aaa);
 
             position: absolute;
             left: -80px;

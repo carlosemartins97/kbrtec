@@ -77,6 +77,8 @@ export const Description = styled.span`
 `;
 
 export const Subscribe = styled.div`
+    position: relative;
+    z-index: 3;
     width: 260px;
     height: 170px;
 
@@ -95,8 +97,26 @@ export const Subscribe = styled.div`
     border-radius: 14px;
 
     > a {
+        position: relative;
+        z-index: 3;
+
         background: ${props => props.theme.colors.secondary};
         padding: 0px 30px;
+    }
+
+    >:last-child {
+        left: 50%;
+        top: 15%;
+        z-index: 0;
+        >:nth-child(n) {
+            width: 100px;
+            height: 100px;
+            border-radius: 25px;
+            border: 0.5px solid rgb(240, 240, 240, 0.5);
+        }
+        >:last-child {
+            display: none;
+        }
     }
 `;
 

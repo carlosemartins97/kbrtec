@@ -51,7 +51,7 @@ function Registration(){
 
     useEffect(() => {
         if(step === 3){
-            console.log(userData);
+            console.log(userData); //dados que serão salvos no banco.
         }
     },[step, userData])
 
@@ -65,7 +65,6 @@ function Registration(){
     // }
 
     //validação de dados
-    //trabalhar responsividade
     
 
     return (

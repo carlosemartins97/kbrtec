@@ -56,6 +56,7 @@ const RegistrationSteps = () => {
                     <Button>
                         Inscreva-se
                     </Button>
+                    <TwoSquadsBackground />
                 </Subscribe>
             </ContentSteps>
             

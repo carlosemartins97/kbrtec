@@ -95,6 +95,12 @@ export const Social = styled.div`
         margin: 0 10px;
 
         width: 40px;
+
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.3);
+        }
     }
 
     @media(max-width: 1024px){

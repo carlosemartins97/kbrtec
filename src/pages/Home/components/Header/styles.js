@@ -194,13 +194,10 @@ export const ContentText = styled.div`
     
     //Botão
     > a {
-        width: 550px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        text-align: center;
         max-width: 550px;
 
-        background: ${props => props.theme.colors.secondary};    
     }
     @media(max-width: 550px){
         > h1 {
