@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
     background: linear-gradient(
@@ -106,6 +106,14 @@ export const Content = styled.div`
 
         text-transform: uppercase;
         font-size: 13px;
+
+        > p {
+            text-align: center;
+            margin-bottom: 30px;
+            color: ${props => props.theme.colors.warning};
+            text-transform: none;
+            font-size: 12px;
+        }
 
         > div {
             display: flex;
@@ -231,8 +239,6 @@ export const LogoContent = styled.div`
             left: 5%;
         }
     }
-
-    
 `;
 
 
@@ -252,7 +258,7 @@ export const Steps = styled.div`
         justify-content: center;
         align-items: center;
 
-        margin-top: 200px;
+        margin-top: 140px;
 
         p {
             color: ${props => props.theme.colors.black};

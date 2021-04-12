@@ -22,6 +22,14 @@ import Button from '../../core/components/Button';
 function Registration(){
     const [step, setStep] = useState(1);
 
+    const [errorNameMsg, setErrorNameMsg] = useState('');
+    const [errorEmailMsg, setErrorEmailMsg] = useState('');
+    const [errorPhoneMsg, setErrorPhoneMsg] = useState('');
+
+    const [errorCpfMsg, setErrorCpfMsg] = useState('');
+    const [errorCityMsg, setErrorCityMsg] = useState('');
+    const [errorStateMsg, setErrorStateMsg] = useState('');
+
     const [userData, setUserData] = useState({});
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -57,6 +65,54 @@ function Registration(){
 
     function handleBack(){
         setStep(1);
+    }
+
+    function validateFirstStepData(){
+        if(name === ''){
+            setErrorNameMsg('Digite seu nome completo.');
+        } else {
+            setErrorNameMsg('');
+        }
+
+        if (!(/^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email))){
+            setErrorEmailMsg('Digite um email válido.');
+        } else {
+            setErrorEmailMsg('');
+        }
+
+        if(phone.length !== 11){
+            setErrorPhoneMsg('Digite um celular válido.')  ;      
+        } else {
+            setErrorPhoneMsg('');
+        }
+
+        if(name !== '' && (/^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email)) === true && phone.length === 11) {
+            handleSaveUserData();
+        }
+    }
+
+    function validateSecondStepData(){
+        if(cpf.length !== 11){
+            setErrorCpfMsg('Digite um cpf válido.')
+        } else {
+            setErrorCpfMsg('')
+        }
+
+        if(city === ''){
+            setErrorCityMsg('Digite uma cidade válida.')
+        } else {
+            setErrorCityMsg('')
+        }
+
+        if(state === ''){
+            setErrorStateMsg('Digite um estado válido.')
+        } else {
+            setErrorStateMsg('')
+        }
+
+        if(cpf.length === 11 && city !== '' && state !== ''){
+            handleSaveUserData();
+        }
     }
 
     
@@ -129,6 +185,11 @@ function Registration(){
                                     { step === 1 && (
                                         <>
                                         <h1>Crie sua conta</h1>
+                                        <p>
+                                            {errorNameMsg} <br/>
+                                            {errorEmailMsg} <br/>
+                                            {errorPhoneMsg}
+                                        </p>
                                         <label>nome completo
                                             <input type="text" placeholder="EX: Diego Ribeiro" value={name} onChange={(e) => setName(e.target.value)}/>
                                         </label>
@@ -155,6 +216,11 @@ function Registration(){
                                                 <IoIosArrowBack onClick={handleBack}/>
                                                 <h1>Crie sua conta</h1>
                                             </div>
+                                            <p>
+                                            {errorCpfMsg} <br/>
+                                            {errorCityMsg} <br/>
+                                            {errorStateMsg}
+                                            </p>
                                             <label>CPF
                                                 <MaskedInput 
                                                     placeholder="EX: 123-456-789-10" 
@@ -164,7 +230,7 @@ function Registration(){
                                                 />
                                             </label>
 
-                                            <label>Cidade
+                                            <label>Cidade 
                                                 <input type="text" placeholder="EX: Santos" value={city} onChange={(e) => setCity(e.target.value)}/>
                                             </label>
 
@@ -176,11 +242,18 @@ function Registration(){
                                     }
 
                                     {
-                                        step === 1 || step === 2 ? (
-                                            <button type="button" onClick={handleSaveUserData}>
+                                        step === 1 && (
+                                            <button type="button" onClick={validateFirstStepData}>
                                                 Continuar
                                             </button>
-                                        ) : null
+                                        )
+                                    }
+                                    {
+                                        step === 2 && (
+                                            <button type="button" onClick={validateSecondStepData}>
+                                                Continuar
+                                            </button>
+                                        )
                                     }
                                 </form>
                             </>
