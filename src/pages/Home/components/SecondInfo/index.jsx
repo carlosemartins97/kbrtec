@@ -66,7 +66,7 @@ const SecondInfo = () => {
                             return (
                                 <GridItem key={item.name}>
                                     <Rectangle>
-                                        <img src={item.img} alt={item.name}/>
+                                        <img src={item.img} loading="lazy" alt={item.name}/>
                                     </Rectangle>
                                     <span>{item.name}</span>
                                 </GridItem>

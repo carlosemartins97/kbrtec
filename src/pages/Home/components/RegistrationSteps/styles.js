@@ -102,6 +102,11 @@ export const Subscribe = styled.div`
 
         background: ${props => props.theme.colors.secondary};
         padding: 0px 30px;
+
+        &:hover {
+            opacity: unset;
+            color: ${props => props.theme.colors.gradient.primary};
+        }
     }
 
     >:last-child {

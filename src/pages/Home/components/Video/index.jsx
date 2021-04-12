@@ -14,7 +14,7 @@ const Video = () => {
                 typesetting industry. Lorem Ipsum:
             </ContentTitle>
 
-            <IframeTag src="https://www.youtube.com/embed/0Gi-cSZetDY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IframeTag>
+            <IframeTag src="https://www.youtube.com/embed/0Gi-cSZetDY" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IframeTag>
         </Container>
     )
 }

@@ -59,9 +59,9 @@ const FeedbackAndPartners = () => {
                     </Description>
 
                     <VideoArea>
-                        <img src={firstImg} alt=""/>
-                        <img src={secondImg} alt=""/>
-                        <img src={thirdImg} alt=""/>
+                        <img src={firstImg} loading="lazy" alt=""/>
+                        <img src={secondImg} loading="lazy" alt=""/>
+                        <img src={thirdImg} loading="lazy" alt=""/>
                     </VideoArea>
                     
 
@@ -83,7 +83,7 @@ const FeedbackAndPartners = () => {
                         {allPartnersImages.map(item => {
                             return (
                                 <ImageContainer key={item.name}>
-                                    <img src={item.img} alt={item.name}/>
+                                    <img src={item.img} loading="lazy" alt={item.name}/>
                                 </ImageContainer>
                             )
                         })}

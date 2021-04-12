@@ -95,6 +95,7 @@ export const GridContent = styled.div`
 
     @media(max-width: 1050px){
         grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
     }
     @media(max-width: 500px){
         grid-template-columns: repeat(1, 1fr);
@@ -136,7 +137,16 @@ export const GridItem = styled.div`
     }
 
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
+        
+        &::after {
+            content: '';
+            width: 50%;
+            height: 4px;
+            background: ${props => props.theme.colors.secondary};
+            transition: transform 0.3s;
+            
+        }
     }
     
 `;
