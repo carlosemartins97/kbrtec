@@ -7,6 +7,9 @@ import MaskedInput from '../../core/components/MaskedInput';
 import {IoIosArrowBack} from 'react-icons/io';
 import Logo from '../../core/assets/logo1.png';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 import {
     Container,
     RegistrationContainer,
@@ -56,6 +59,10 @@ function Registration(){
             setStep(3);
         }
     }
+
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
 
     useEffect(() => {
         if(step === 3){
@@ -141,7 +148,7 @@ function Registration(){
 
 
             
-            <RegistrationContainer>
+            <RegistrationContainer data-aos="slide-down">
                 <LogoContent>
                     <Rectangle >
                         <a href="/"><img src={Logo} alt="Logo da empresa"/></a>
@@ -271,7 +278,7 @@ function Registration(){
                     
                 </Content>
             </RegistrationContainer>
-            <Footer />
+            <Footer/>
         </Container>
     )
 }

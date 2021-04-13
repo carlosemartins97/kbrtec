@@ -38,9 +38,6 @@ const Home = () => {
     useEffect(() => {
         Aos.init({duration: 1000});
     },[])
-
-
-
     return (
         <Container>
             <Header onOpenModal={handleOpenModal}/>
