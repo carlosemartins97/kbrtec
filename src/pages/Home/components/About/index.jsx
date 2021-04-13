@@ -6,7 +6,7 @@ import instaImg from '../../../../core/assets/insta.png'
 import twitterImg from '../../../../core/assets/twitter.png'
 
 import Rectangle from '../../../../core/components/Rectangle'
-import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground'
+import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground';
 
 import {
     Container,
@@ -22,7 +22,7 @@ import {
 
 const About = () => {
     return (
-        <Container>
+        <Container data-aos="slide-up">
             <ImgContainer>
                 <LeftBackgroundDetails>
                     <Rectangle />

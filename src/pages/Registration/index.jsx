@@ -69,8 +69,11 @@ function Registration(){
 
     function validateFirstStepData(){
         if(name === ''){
+            setErrorNameMsg('Insira seu nome');
+        } else if(!/[A-Z][a-z]* [A-Z][a-z]*/.test(name)) {
             setErrorNameMsg('Digite seu nome completo.');
-        } else {
+        }
+        else {
             setErrorNameMsg('');
         }
 
@@ -86,7 +89,7 @@ function Registration(){
             setErrorPhoneMsg('');
         }
 
-        if(name !== '' && (/^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email)) === true && phone.length === 11) {
+        if(name !== '' && (/[A-Z][a-z]* [A-Z][a-z]*/.test(name) === true) && (/^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/.test(email)) === true && phone.length === 11) {
             handleSaveUserData();
         }
     }

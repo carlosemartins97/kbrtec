@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import SubscriptionModal from '../../core/components/SubscriptionModal';
 
@@ -17,6 +17,8 @@ import ProsAndCons from './components/ProsAndCons';
 import Video from './components/Video';
 import Footer from './components/Footer';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import {
     Container,
 } from './styles';
@@ -33,9 +35,15 @@ const Home = () => {
         setIsModalOpen(false)
     }
 
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    },[])
+
+
+
     return (
         <Container>
-            <Header onOpenModal={handleOpenModal} />
+            <Header onOpenModal={handleOpenModal}/>
             <SubscriptionModal 
                 isOpen={isModalOpen}
                 onRequestClose={handleCloseModal}
@@ -45,7 +53,7 @@ const Home = () => {
 
             <FirstDivider />
 
-            <FirstInfo />
+            <FirstInfo/>
 
             <YearsInfo />
 

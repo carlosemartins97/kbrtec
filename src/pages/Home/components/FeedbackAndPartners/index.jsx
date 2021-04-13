@@ -31,14 +31,14 @@ import {
 const FeedbackAndPartners = () => {
 
     const allPartnersImages = [
-        {name: 'globo', img: globo},
-        {name: 'uol', img: uol},
-        {name: 'cbn', img: cbn},
-        {name: 'g1', img: g1},
-        {name: 'bandnews', img: bandnews},
-        {name: 'oglobo', img: oglobo},
-        {name: 'vendamais', img: vendamais},
-        {name: 'negocios', img: negocios},
+        {name: 'globo', img: globo, delay: 600},
+        {name: 'uol', img: uol, delay: 700},
+        {name: 'cbn', img: cbn, delay: 800},
+        {name: 'g1', img: g1, delay: 900},
+        {name: 'bandnews', img: bandnews, delay: 1000},
+        {name: 'oglobo', img: oglobo, delay: 1100},
+        {name: 'vendamais', img: vendamais, delay: 1200},
+        {name: 'negocios', img: negocios, delay: 1300},
     ]
 
     return (
@@ -46,7 +46,7 @@ const FeedbackAndPartners = () => {
             <BackgroundDetails>
                 <Rectangle />
             </BackgroundDetails>
-            <Feedback>
+            <Feedback data-aos="slide-right">
                 <Content>
                     <Title>
                         Depoimentos
@@ -59,16 +59,16 @@ const FeedbackAndPartners = () => {
                     </Description>
 
                     <VideoArea>
-                        <img src={firstImg} loading="lazy" alt=""/>
-                        <img src={secondImg} loading="lazy" alt=""/>
-                        <img src={thirdImg} loading="lazy" alt=""/>
+                        <img src={firstImg} loading="lazy" alt="vídeo 1"/>
+                        <img src={secondImg} loading="lazy" alt="vídeo 2"/>
+                        <img src={thirdImg} loading="lazy" alt="vídeo 3"/>
                     </VideoArea>
                     
 
                 </Content>
             </Feedback>
 
-            <Partners>
+            <Partners data-aos="slide-left">
                 <Content>
                     <Title>
                         LOREM IPSUM

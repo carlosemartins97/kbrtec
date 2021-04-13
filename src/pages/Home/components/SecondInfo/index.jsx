@@ -26,16 +26,16 @@ import {
 const SecondInfo = () => {
 
     const gridData = [
-        {img: training, name: 'Palestras'},
-        {img: talk1Img, name: 'Atendimento Individual'},
-        {img: talk2Img, name: 'Treinamentos e Workshops'},
-        {img: seminario, name: 'Programas de Formação'},
-        {img: presentation, name: 'Consultoria de Gestão'},
+        {img: training, name: 'Palestras', delay: 100},
+        {img: talk1Img, name: 'Atendimento Individual', delay: 200},
+        {img: talk2Img, name: 'Treinamentos e Workshops', delay: 300},
+        {img: seminario, name: 'Programas de Formação', delay: 400},
+        {img: presentation, name: 'Consultoria de Gestão', delay: 500},
     ]
 
     return (
         <Container>
-            <Content>
+            <Content  data-aos="fade-down">
                 <ContentTitle>
                     <Rectangle>
                         <img src={infoImg} alt=""/>
@@ -56,7 +56,7 @@ const SecondInfo = () => {
             </Content>
 
             <Grid>
-                <GridTitle>
+                <GridTitle data-aos="fade">
                     A like Aldus PageMaker including
                 </GridTitle>
                 
@@ -64,7 +64,7 @@ const SecondInfo = () => {
                     {
                         gridData.map(item => {
                             return (
-                                <GridItem key={item.name}>
+                                <GridItem key={item.name} data-aos-delay={item.delay} data-aos="fade-down">
                                     <Rectangle>
                                         <img src={item.img} loading="lazy" alt={item.name}/>
                                     </Rectangle>

@@ -3,16 +3,16 @@ import React from 'react';
 import Divider from '../../../../core/components/Divider';
 import Button from '../../../../core/components/Button';
 
-
 import {
     ButtonArea,
     TextArea
 } from './styles';
 
 const SecondDivider = () => {
+
     return (
         <Divider>
-            <TextArea>
+            <TextArea data-aos="fade-left">
                 <h2>
                     Versions of Lorem Ipsum Letraset sheets 
                     <span> publishing software like ?</span>
@@ -24,7 +24,7 @@ const SecondDivider = () => {
                 </p>
             </TextArea>
 
-            <ButtonArea>
+            <ButtonArea data-aos="fade-right">
                 <Button href="/">
                     containing Lorem Ipsum passages
                 </Button>

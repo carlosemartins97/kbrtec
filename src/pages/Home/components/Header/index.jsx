@@ -1,13 +1,11 @@
 import React from 'react';
 
-
-
 import Rectangle from '../../../../core/components/Rectangle';
+import Button from '../../../../core/components/Button';
 
 import Logo from '../../../../core/assets/logo1.png'
 import imgInfo from '../../../../core/assets/moreinfo.png'
 
-import Button from '../../../../core/components/Button';
 
 import {
     Container,
@@ -25,15 +23,11 @@ import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground
 
 
 const Header = ({onOpenModal}) => {
-    
-
     return (
         <Container>
-            
-
-            <NavHeader>
+            <NavHeader data-aos="fade-down">
                 <Rectangle >
-                    <a href="/"><img src={Logo} alt="Logo da empresa"/></a>
+                    <a href="/" id="topo"><img src={Logo} alt="Logo da empresa"/></a>
                 </Rectangle>
 
                 <MoreInfo>
@@ -46,14 +40,11 @@ const Header = ({onOpenModal}) => {
 
                     <img src={imgInfo} alt=""/>
                 </MoreInfo>
-
-                
-
             </NavHeader>
 
             <ContentHeader>
                 <TwoSquadsBackground />
-                <ContentText>
+                <ContentText data-aos="slide-right">
                     <h1>
                         standard Lorem Ipsum <br/>
                         <span>Excepteur sint occaec</span> <br/>
@@ -74,8 +65,7 @@ const Header = ({onOpenModal}) => {
                     </Button>
                 </ContentText>
 
-                <ContentImage>
-
+                <ContentImage data-aos="slide-left">
                     <Main>
                         <RectangleImage/>
                         <RectangleBackgrounds>

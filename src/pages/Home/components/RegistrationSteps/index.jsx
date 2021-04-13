@@ -18,13 +18,13 @@ import TwoSquadsBackground from '../../../../core/components/TwoSquadsBackground
 const RegistrationSteps = () => {
 
     const allSetps = [
-        {stepNumber: 1, stepDescription: 'Sed ut perspiciatis unde omnis iste natus error'},
-        {stepNumber: 2, stepDescription: 'mistaken idea of denouncing'},
-        {stepNumber: 3, stepDescription: 'or again is there anyone who loves'},
-        {stepNumber: 4, stepDescription: 'ursues or desires to obtain pain of itself'},
-        {stepNumber: 5, stepDescription: 'ursues or desires to obtain pain of itself'},
-        {stepNumber: 6, stepDescription: 'Sed ut perspiciatis unde omnis iste natus error'},
-        {stepNumber: 7, stepDescription: 'mistaken idea of denouncing'},
+        {stepNumber: 1, stepDescription: 'Sed ut perspiciatis unde omnis iste natus error', delay: 0},
+        {stepNumber: 2, stepDescription: 'mistaken idea of denouncing', delay: 150},
+        {stepNumber: 3, stepDescription: 'or again is there anyone who loves', delay: 300},
+        {stepNumber: 4, stepDescription: 'ursues or desires to obtain pain of itself', delay: 450},
+        {stepNumber: 5, stepDescription: 'ursues or desires to obtain pain of itself', delay: 600},
+        {stepNumber: 6, stepDescription: 'Sed ut perspiciatis unde omnis iste natus error', delay: 750},
+        {stepNumber: 7, stepDescription: 'mistaken idea of denouncing', delay: 900},
     ]
 
     return (
@@ -33,7 +33,7 @@ const RegistrationSteps = () => {
                 <TwoSquadsBackground />
             </LeftBackgroundDetails>
 
-            <ContentTitle>
+            <ContentTitle data-aos="slide-right" data-aos-duration={800}>
                 Etapas da Inscrição
             </ContentTitle>
 
@@ -41,7 +41,7 @@ const RegistrationSteps = () => {
                 {
                     allSetps.map(item => {
                         return (
-                            <Step key={item.stepNumber}>
+                            <Step key={item.stepNumber} data-aos="fade-down" data-aos-delay={item.delay}>
                                 <Rectangle>
                                     <span>.{item.stepNumber}</span>
                                 </Rectangle>
@@ -52,7 +52,7 @@ const RegistrationSteps = () => {
                         )
                     })
                 }
-                <Subscribe>
+                <Subscribe data-aos="zoom-in-up" data-aos-delay={1000}>
                     <Button>
                         Inscreva-se
                     </Button>

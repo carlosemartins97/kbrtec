@@ -30,7 +30,7 @@ const ProsAndCons = () => {
                 <TwoSquadsBackground/>
             </BackgroundDetails>
 
-            <ContentInfo>
+            <ContentInfo data-aos="fade">
                 <ContentTitle>
                     Lorem Ipsum is simply dummy text of THE 
                 </ContentTitle>
@@ -46,7 +46,7 @@ const ProsAndCons = () => {
             </ContentInfo>
 
             <ContentProsAndCons>
-                <Pros>
+                <Pros data-aos="fade-up">
                     <img src={prosImg} alt="Símbolo significando algo positivo."/>
                     <p>
                         consequuntur magni dolores eos qui ratione voluptatem sequi 
@@ -54,7 +54,7 @@ const ProsAndCons = () => {
                     </p>
                 </Pros>
 
-                <Cons>
+                <Cons data-aos="fade-down" data-aos-duration={1000}>
                     <img src={consImg} alt="Símbolo significando algo negativo."/>
                     <p>
                         But I must explain to you how all this mistaken idea of denouncing pleasure 

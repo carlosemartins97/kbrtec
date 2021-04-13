@@ -9,6 +9,7 @@ export default createGlobalStyle`
     
     html, body, #root {
         height: 100%;
+        scroll-behavior: smooth;
     }
 
     *, button, input {

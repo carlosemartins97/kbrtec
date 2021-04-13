@@ -85,15 +85,9 @@ export const Description = styled.p`
     text-transform: uppercase;
 `;
 
-export const VideoArea = styled.div`
-    display: flex;
-    flex-direction:  column;
-    justify-content: center;
-
-    
+export const VideoArea = styled.div`    
     > img {
         padding: 10px 0;
-
     }
     @media(max-width: 1465px){
             text-align:center;

@@ -28,7 +28,7 @@ const LeftContent = () => {
     ]
     
     return (
-        <Container>
+        <Container data-aos="slide-right">
             <FirstHalf>
                 <h2>Versions of Lorem IpsumLetraset sheets</h2>
                 <ContentSubtitle>

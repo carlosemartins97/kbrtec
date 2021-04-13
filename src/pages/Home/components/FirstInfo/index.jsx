@@ -6,12 +6,11 @@ import {
     Container,
     LeftContent,
     RightContent,
-
 } from './styles';
 
 const FirstInfo = () => {
     return (
-        <Container>
+        <Container data-aos="fade-down">
 
             <LeftContent>
                 <p>

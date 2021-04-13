@@ -19,10 +19,9 @@ const RightContent = () => {
         {msg: 'Dislike men who are so beguiled'},
         {msg: 'Demoralized by the charms of pleasure'},
     ]
-
     
     return (
-        <Container>
+        <Container data-aos="slide-left">
             <h2>Versions of Lorem IpsumLetraset sheets</h2>
             <ContentSubtitle>
                 Awill uncover many red alteration in some form, by injected

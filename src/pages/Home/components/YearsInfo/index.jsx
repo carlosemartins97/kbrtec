@@ -27,7 +27,7 @@ const YearsInfo = () => {
 
     return (
         <Container>
-            <LeftContent>
+            <LeftContent data-aos="slide-right">
                 <BackgroundDetails>
                     <Rectangle />
                     <Rectangle />
@@ -45,7 +45,8 @@ const YearsInfo = () => {
                 </p>
             </LeftContent>
 
-            <RightContent>
+
+            <RightContent data-aos="slide-left">
                 <Dollar>
                     $
                     <span>$</span>

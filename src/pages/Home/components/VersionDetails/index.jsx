@@ -9,7 +9,6 @@ import {
 } from './styles';
 
 const VersionDetails = () => {
-    
     return (
         <Container>
             <LeftContent/>

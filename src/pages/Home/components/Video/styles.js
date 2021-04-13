@@ -7,6 +7,14 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    a {
+        color: #fff;
+        margin-bottom: 30px;
+        &:visited {
+            color: #fff;
+        }
+    }
 `;
 
 export const ContentTitle = styled.h2`
@@ -25,6 +33,8 @@ export const ContentTitle = styled.h2`
         margin-top: 100px;
         margin-bottom: 20px;
     }
+
+    
 `;
 
 export const IframeTag = styled.iframe`

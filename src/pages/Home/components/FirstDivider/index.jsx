@@ -13,8 +13,8 @@ import {
 
 const FirstDivider = () => {
     return (
-        <Divider>
-                <ImageArea>
+        <Divider >
+                <ImageArea data-aos="fade-left">
                     <img src={Logo} alt="Logo da empresa"/>
                     <h2>
                         Lorem Ipsum <br />
@@ -23,7 +23,7 @@ const FirstDivider = () => {
                     </h2>
                 </ImageArea>
 
-                <TextArea>
+                <TextArea data-aos="fade-right">
                     <p>
                         <span>Lorem Ipsum</span> to make a type specimen book. It has survived not only five centuries,
                         but also the leap into electronic typesetting, remaining essentially unchanged.
@@ -33,8 +33,8 @@ const FirstDivider = () => {
                     </p>
                 </TextArea>
                 
-                <BackgroundDetails>
-                    <Rectangle />
+                <BackgroundDetails >
+                    <Rectangle/>
                 </BackgroundDetails>
             </Divider>
     )

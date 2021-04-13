@@ -25,11 +25,11 @@ import CorrectCircle from '../../../../../core/components/CorrectCircle';
 const Details = () => {
 
     const allFormationsInfo = [
-        {title: 'Formação como Coach', price: '7.000', subtitle:'(8 dias)'},
-        {title: 'Formação em Coaching Express', price: '8.000'},
-        {title: 'Formação em Oratória e Curso de Palestrante', price: '2.497'},
-        {title: 'Uma formação em consultoria em gestão', price: '4.000', subtitle:'(16 horas)'},
-        {title: 'Programas de formação e treinamento corporativo', price: '3.500', subtitle:'(16 horas)'},
+        {title: 'Formação como Coach', price: '7.000', subtitle:'(8 dias)', delay: 0},
+        {title: 'Formação em Coaching Express', price: '8.000', delay: 150},
+        {title: 'Formação em Oratória e Curso de Palestrante', price: '2.497', delay: 300},
+        {title: 'Uma formação em consultoria em gestão', price: '4.000', subtitle:'(16 horas)', delay: 450},
+        {title: 'Programas de formação e treinamento corporativo', price: '3.500', subtitle:'(16 horas)', delay: 600},
     ]
 
     const allExamplesList = [
@@ -39,12 +39,12 @@ const Details = () => {
     ]
 
     return (
-        <Container>
+        <Container data-aos="fade">
             <FormationContainer>
             {
                 allFormationsInfo.map(item => {
                     return (
-                        <Formation key={item.title}>
+                        <Formation key={item.title} data-aos-delay={item.delay} data-aos="fade-down">
                             <Rectangle><img src={correctImg} alt="Foto de um símbolo positivo."/></Rectangle>
 
                             <FormationTitle>
@@ -67,7 +67,7 @@ const Details = () => {
             <CallToActionButtons />
 
             <ContentDetails>
-                <DescriptionDetails>
+                <DescriptionDetails data-aos="fade-right">
                     <h2>Lorem Ipsum is therefore</h2>
 
                     <p>
@@ -88,7 +88,7 @@ const Details = () => {
                     <h3>Roots in a piece of classical Latin literature from</h3>
                 </DescriptionDetails>
 
-                <ExamplesDetails>
+                <ExamplesDetails data-aos="fade-left">
                     <p>
                         Web sites still in their infancy. Various versions have evolved over the years, sometimes
                     </p>
