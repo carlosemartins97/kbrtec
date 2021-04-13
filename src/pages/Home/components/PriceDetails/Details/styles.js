@@ -28,6 +28,7 @@ export const FormationContainer = styled.div`
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
 
     @media(max-width: 1000px){
         grid-template-columns: repeat(2, 1fr);
@@ -42,7 +43,7 @@ export const Formation = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    transition: transform 0.3s;
+    transition: color 0.3s;
 
 
     > :first-child {
@@ -54,6 +55,7 @@ export const Formation = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+
         > img {
             transform: rotate(45deg);
 
@@ -67,7 +69,7 @@ export const Formation = styled.div`
     }
 
     &:hover {
-        transform: translateY(10px);
+        border-bottom: 2px solid ${props => props.theme.colors.secondary};
         cursor: pointer;
     }
 

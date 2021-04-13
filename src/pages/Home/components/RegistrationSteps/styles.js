@@ -39,8 +39,6 @@ export const Step = styled.div`
 
     margin-top: 100px;
 
-    transition: transform 0.3s;
-
     > :first-child {
         display: flex;
         justify-content: center;
@@ -60,10 +58,6 @@ export const Step = styled.div`
             letter-spacing: 0.055em;
             text-transform: uppercase;
         }
-    }
-
-    &:hover {
-        transform: scale(1.2);
     }
 `;
 

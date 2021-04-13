@@ -29,10 +29,10 @@ export const FirstOfferButton = styled.a`
     background: ${props => props.theme.colors.warning};
     border-radius: 20px;
 
-    transition: transform 0.2s;
+    transition: filter 0.2s;
 
     &:hover {
-        transform: scaleY(1.1);
+        filter: brightness(1.2);
     }
 
     @media(max-width: 770px){
@@ -61,7 +61,7 @@ export const SecondOfferButton = styled.a`
     max-width: 600px;
     height: 200px;
 
-    transition: transform 0.2s;
+    transition: filter 0.2s;
 
     > span {
         color: ${props => props.theme.colors.warning};
@@ -77,7 +77,7 @@ export const SecondOfferButton = styled.a`
     
 
     &:hover {
-        transform: scaleY(1.1);
+        filter: brightness(0.8);
     }
 
     @media(max-width: 550px){

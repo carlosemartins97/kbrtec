@@ -110,7 +110,6 @@ export const GridItem = styled.div`
     flex-direction: column;
 
     margin: 0 20px;
-    transition: transform 0.3s;
 
     > :first-child {
         width: 115px;
@@ -136,13 +135,12 @@ export const GridItem = styled.div`
         text-align: center;
     }
 
-    &:hover {
-        transform: scale(1.1);
-        
+    &:hover { 
+        cursor: pointer;
         &::after {
             content: '';
             width: 50%;
-            height: 4px;
+            height: 2px;
             background: ${props => props.theme.colors.secondary};
             transition: transform 0.3s;
             
