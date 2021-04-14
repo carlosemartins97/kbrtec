@@ -40,6 +40,7 @@ function Registration(){
     const [cpf, setCpf] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
+    
 
     function handleSaveUserData(){
         if(step === 1 ){

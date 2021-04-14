@@ -36,7 +36,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        Aos.init({duration: 1000});
+        Aos.init({duration: 1000, delay:200});
     },[])
     return (
         <Container>

@@ -33,49 +33,58 @@ export const Content = styled.div`
             font-weight: 700;
             display: flex;
             justify-content: space-between;
-            
-            & + label {
-                margin-top: 40px;
-            }
+            margin-bottom: 40px;
 
             input {
                 font-size: 16px;
                 margin-left: 10px;
                 background: transparent;
-                width: 100%;
-                max-width: 300px;
-                border: 1px solid #aaa;
+                flex: 1;
             }
 
         }
 
-        
-    }
-    button {
-        margin: 0 auto;
+        p {
+            margin: 0 auto 20px;
+            color: ${props => props.theme.colors.warning};
+        }
 
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 60px;
+        button {
+            margin: 0 auto;
 
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 60px;
 
-        background: linear-gradient(${props => props.theme.colors.gradient.secondary}, ${props => props.theme.colors.gradient.primary});
-        color: #fff;
-        
-        border-radius: 30px;
-        
-        padding: 0 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
 
-        transition: filter 0.2s;
+            background: linear-gradient(${props => props.theme.colors.gradient.secondary}, ${props => props.theme.colors.gradient.primary});
+            color: #fff;
+            
+            border-radius: 30px;
+            
+            padding: 0 20px;
+
+            transition: filter 0.2s;
         
-        &:hover {
+            &:hover {
                 filter: brightness(0.9); 
             }
+        }
+
+        @media(max-width: 1000px){
+            label {
+                margin-bottom: 30px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+        }
     }
+    
 
     @media(max-width: 1000px){
         padding-top: 110px;
@@ -171,6 +180,7 @@ export const RightDetails = styled.div`
         height: 30px;
 
         position: absolute;
+        z-index: 3;
         right: 25px;
         top: 25px;
         cursor: pointer;
@@ -180,5 +190,10 @@ export const RightDetails = styled.div`
         &:hover {
             opacity: .5;
         }
+
+        @media(max-width: 400px){
+            right: 0;
+            top: 40;
+        } 
     }
 `;

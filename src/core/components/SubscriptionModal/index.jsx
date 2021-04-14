@@ -17,11 +17,49 @@ import { useState } from 'react';
 
 Modal.setAppElement('#root');
 
-export function SubscriptionModal({onRequestClose, isOpen}){
+function SubscriptionModal({onRequestClose, isOpen}){
 
     const [cpf, setCpf] = useState('');
     const [phone, setPhone] = useState('');
     const [name, setName] = useState('');
+
+    const [errorCpfMessage, setErrorCpfMessage] = useState('');
+    const [errorPhoneMessage, setErrorPhoneMessage] = useState('');
+    const [errorNameMessage, setErrorNameMessage] = useState('');
+
+    const [isValid, setIsValid] = useState(false);
+
+    function handleValidateData() {
+        if(name === ''){
+            setErrorNameMessage('Insira seu nome');
+        } else {
+            setErrorNameMessage('');
+        }
+        
+        if(phone.length !== 11){
+            setErrorPhoneMessage('Digite um número de celular válido.')
+        } else {
+            setErrorPhoneMessage('');
+        }
+
+        if(cpf.length !== 11) {
+            setErrorCpfMessage('Digite um cpf válido');
+        } else {
+            setErrorCpfMessage('');
+        }
+
+        if(name !== '' && phone.length === 11 && cpf.length === 11) {
+            setIsValid(true);
+        }
+    }
+
+    function handleSubmitModal(){
+        handleValidateData();
+        if(isValid){
+            setTimeout(() => onRequestClose(), 1000);
+        }
+        
+    }
 
     return (
         <Modal
@@ -47,7 +85,7 @@ export function SubscriptionModal({onRequestClose, isOpen}){
                 <Content>
                     <h1>NÃO SAIA AINDA! PREPARAMOS UM
                     PRESENTE ESPECIAL PARA VOCÊ</h1>
-                    <form>
+                    <form onSubmit={(event) => event.preventDefault()}>
                         <label> SEU NOME: 
                             <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
                         </label>
@@ -65,10 +103,15 @@ export function SubscriptionModal({onRequestClose, isOpen}){
                                 onChange={(e) => setCpf(e.target.value)}
                             />
                         </label>
+                        <p>
+                            {errorNameMessage} <br/>
+                            {errorPhoneMessage} <br/>
+                            {errorCpfMessage}
+                        </p>
+                        <button type="submit" onClick={handleSubmitModal}>
+                            Concluir inscrição
+                        </button>
                     </form>
-                    <button type="submit">
-                        Concluir inscrição
-                    </button>
                 </Content>
                 
             </Container>
