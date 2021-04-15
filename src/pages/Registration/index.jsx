@@ -72,14 +72,20 @@ function Registration(){
 
         try { 
             axios.get(BASE_URL)
-                .then(response => setStateOptions(response.data));
+                .then(response => setStateOptions(response.data.sort(
+                    function(a, b) {
+                        var textA = a.nome;
+                        var textB = b.nome;
+                        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                    }
+                )));
         } catch {
             alert('Erro ao fazer requisição.')
         }
     },[])
 
     useEffect(() => {
-        axios.get(`${BASE_URL}${state}/distritos`)
+        axios.get(`${BASE_URL}${state}/municipios`)
             .then(response => setCityOptions(response.data));
     },[state])
 
@@ -127,19 +133,19 @@ function Registration(){
             setErrorCpfMsg('')
         }
 
-        if(city === ''){
+        if(city === '' || city === '#'){
             setErrorCityMsg('Digite uma cidade válida.')
         } else {
             setErrorCityMsg('')
         }
 
-        if(state === ''){
+        if(state === '' || state === '#'){
             setErrorStateMsg('Digite um estado válido.')
         } else {
             setErrorStateMsg('')
         }
 
-        if(cpf.length === 11 && city !== '' && state !== ''){
+        if(cpf.length === 11 && city !== '' && city !== '#' && state !== '' && state !== '#'){
             handleSaveUserData();
         }
     }
@@ -261,7 +267,7 @@ function Registration(){
 
                                             <label>Estado
                                                 <select placeholder="EX: São Paulo" value={state} onChange={(e) => setState(e.target.value)}>
-                                                    <option value="#" selected >Selecione um estado</option>
+                                                    <option value="#" defaultValue>Selecione um estado</option>
                                                     {
                                                         statesOptions.map(state => {
                                                             return (
@@ -276,7 +282,7 @@ function Registration(){
 
                                             <label>Cidade 
                                                 <select placeholder="EX: Santos" value={city} onChange={(e) => setCity(e.target.value)}>
-                                                    <option value="#" selected >Selecione uma cidade</option>
+                                                    <option value="#" defaultValue>Selecione uma cidade</option>
                                                     {
                                                         cityOptions.map(city => {
                                                             return (
