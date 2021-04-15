@@ -298,7 +298,7 @@ function Registration(){
                                             </label>
 
                                             <button type="button" onClick={validateSecondStepData}>
-                                                Continuar
+                                                Concluir
                                             </button>
 
                                             </form>

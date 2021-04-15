@@ -41,7 +41,7 @@ export const RegistrationContainer = styled.div`
 
     padding: 0 1rem;
 
-    background: ${props => props.theme.colors.black};
+    background: linear-gradient(to bottom, #1b1b1b 0%, ${props => props.theme.colors.black} 60%);
 
     width: 100%;
     max-width: 600px;
