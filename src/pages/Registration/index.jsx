@@ -213,40 +213,42 @@ function Registration(){
                         </Rectangle>
 
                     </Steps>
-                    {
-                        step === 1 || step === 2 ? (
-                            <>
-                                <form onSubmit={() => {}}>
+                    <>
                                     { step === 1 && (
-                                        <>
-                                        <h1>Crie sua conta</h1>
-                                        <p>
-                                            {errorNameMsg} <br/>
-                                            {errorEmailMsg} <br/>
-                                            {errorPhoneMsg}
-                                        </p>
-                                        <label>nome completo
-                                            <input type="text" placeholder="EX: Diego Ribeiro" value={name} onChange={(e) => setName(e.target.value)}/>
-                                        </label>
+                                        <form onSubmit={(e) => {e.preventDefault()}}>
+                                            <h1>Crie sua conta</h1>
+                                            <p>
+                                                {errorNameMsg} <br/>
+                                                {errorEmailMsg} <br/>
+                                                {errorPhoneMsg}
+                                            </p>
+                                            <label>nome completo
+                                                <input type="text" placeholder="EX: Diego Ribeiro" value={name} onChange={(e) => setName(e.target.value)}/>
+                                            </label>
 
-                                        <label>E-mail
-                                            <input type="email" placeholder="EX: diegoribeiro@gmail.com"value={email} onChange={(e) => setEmail(e.target.value)} />
-                                        </label>
+                                            <label>E-mail
+                                                <input type="email" placeholder="EX: diegoribeiro@gmail.com"value={email} onChange={(e) => setEmail(e.target.value)} />
+                                            </label>
 
-                                        <label>celular
-                                            <MaskedInput 
-                                                placeholder="EX: (13) 9 9999-9999" 
-                                                mask="(99) 9 9999-9999"
-                                                value={phone} 
-                                                onChange={(e) => setPhone(e.target.value)}
-                                            />
-                                        </label>
-                                        </>
+                                            <label>celular
+                                                <MaskedInput 
+                                                    placeholder="EX: (13) 9 9999-9999" 
+                                                    mask="(99) 9 9999-9999"
+                                                    value={phone} 
+                                                    onChange={(e) => setPhone(e.target.value)}
+                                                />
+                                            </label>
+
+                                            <button type="button" onClick={validateFirstStepData}>
+                                                Continuar
+                                            </button>
+
+                                        </form>
                                     )}
 
                                     {
                                         step === 2 && (
-                                            <>
+                                            <form onSubmit={(e) => {e.preventDefault()}}>
                                             <div>
                                                 <IoIosArrowBack onClick={handleBack}/>
                                                 <h1>Crie sua conta</h1>
@@ -295,33 +297,23 @@ function Registration(){
                                                 </select>
                                             </label>
 
-                                            </>
-                                        )
-                                    }
-
-                                    {
-                                        step === 1 && (
-                                            <button type="button" onClick={validateFirstStepData}>
-                                                Continuar
-                                            </button>
-                                        )
-                                    }
-                                    {
-                                        step === 2 && (
                                             <button type="button" onClick={validateSecondStepData}>
                                                 Continuar
                                             </button>
+
+                                            </form>
                                         )
                                     }
-                                </form>
                             </>
-                        ) : (
-                            <section>
-                                <h1>Obrigado por se registrar!</h1>
-                                <Button href="/">Voltar para home</Button>
-                            </section>
-                        )
-                    }
+                        
+                            {
+                                step === 3 && (
+                                    <section>
+                                        <h1>Obrigado por se registrar!</h1>
+                                        <Button href="/">Voltar para home</Button>
+                                    </section>
+                                )
+                            }
                     
                     
                 </Content>

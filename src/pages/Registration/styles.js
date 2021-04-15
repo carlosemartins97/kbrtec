@@ -302,7 +302,8 @@ export const Steps = styled.div`
             transform: rotate(45deg);
 
             width: 200%;
-            border-bottom: 3px dotted #eee;
+            transition: border-color 0.7s;
+            border-bottom: 3px dotted ${props => props.step === 3 ? props.theme.colors.secondary : '#eee'};
             height: 1px;
             
 
@@ -327,7 +328,8 @@ export const Steps = styled.div`
             transform: rotate(45deg);
 
             width: 200%;
-            border-bottom: 3px dotted #eee;
+            transition: border-color 0.7s;
+            border-bottom: 3px dotted ${props => props.step >= 2 ? props.theme.colors.secondary : '#eee'};
             height: 1px;
 
             position: absolute;
