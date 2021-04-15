@@ -292,7 +292,7 @@ export const Steps = styled.div`
 
     > :nth-child(2) {
         position: relative;
-        background: ${props => props.step === 1 ? props.theme.colors.black : props.theme.colors.secondary};
+        background: ${props => props.step === 1 ? 'transparent' : props.theme.colors.secondary};
         border: 1px solid ${props => props.theme.colors.secondary};
         p {
             color: ${props => props.step === 1 ? props.theme.colors.white : props.theme.colors.black};
@@ -351,10 +351,10 @@ export const Steps = styled.div`
     }   
 
     > :nth-child(3) {
-        background: ${props => props.step === 2 || props.step === 1 ? props.theme.colors.black : props.theme.colors.secondary};
+        background: ${props => props.step <= 2 ? 'transparent' : props.theme.colors.secondary};
         border: 1px solid ${props => props.theme.colors.secondary};
         p {
-            color: ${props => props.step === 2 || props.step === 1 ? props.theme.colors.white : props.theme.colors.black};
+            color: ${props => props.step <= 2 ? props.theme.colors.white : props.theme.colors.black};
         }
     }  
 
