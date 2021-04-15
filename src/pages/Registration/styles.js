@@ -151,14 +151,14 @@ export const Content = styled.div`
                 margin-top: 26px;
             }
 
-            input {
+            input, select {
                 padding: 15px 0;
                 font-family: 'Fira Sans';
 
                 color: #fff;
 
 
-                background: transparent;
+                background: black;
 
                 border-bottom: 1px solid ${props => props.theme.colors.secondary};
             }
@@ -259,6 +259,8 @@ export const Steps = styled.div`
         align-items: center;
 
         margin-top: 140px;
+
+        transition: background-color 0.7s;
 
         p {
             color: ${props => props.theme.colors.black};

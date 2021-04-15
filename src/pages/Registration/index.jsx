@@ -21,6 +21,7 @@ import {
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Button from '../../core/components/Button';
+import axios from 'axios';
 
 function Registration(){
     const [step, setStep] = useState(1);
@@ -40,6 +41,11 @@ function Registration(){
     const [cpf, setCpf] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
+
+    const [statesOptions, setStateOptions] = useState([]);
+    const [cityOptions, setCityOptions] = useState([]);
+
+    const BASE_URL = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/';
     
 
     function handleSaveUserData(){
@@ -63,7 +69,19 @@ function Registration(){
 
     useEffect(() => {
         Aos.init({duration: 1000});
+
+        try { 
+            axios.get(BASE_URL)
+                .then(response => setStateOptions(response.data));
+        } catch {
+            alert('Erro ao fazer requisição.')
+        }
     },[])
+
+    useEffect(() => {
+        axios.get(`${BASE_URL}${state}/distritos`)
+            .then(response => setCityOptions(response.data));
+    },[state])
 
     useEffect(() => {
         if(step === 3){
@@ -241,13 +259,36 @@ function Registration(){
                                                 />
                                             </label>
 
-                                            <label>Cidade 
-                                                <input type="text" placeholder="EX: Santos" value={city} onChange={(e) => setCity(e.target.value)}/>
+                                            <label>Estado
+                                                <select placeholder="EX: São Paulo" value={state} onChange={(e) => setState(e.target.value)}>
+                                                    <option value="#" selected >Selecione um estado</option>
+                                                    {
+                                                        statesOptions.map(state => {
+                                                            return (
+                                                                <option key={state.sigla} value={state.sigla}>
+                                                                    {state.nome}
+                                                                </option>
+                                                            )
+                                                        })
+                                                    }
+                                                </select>
                                             </label>
 
-                                            <label>Estado
-                                                <input type="text" placeholder="EX: São Paulo" value={state} onChange={(e) => setState(e.target.value)}/>
+                                            <label>Cidade 
+                                                <select placeholder="EX: Santos" value={city} onChange={(e) => setCity(e.target.value)}>
+                                                    <option value="#" selected >Selecione uma cidade</option>
+                                                    {
+                                                        cityOptions.map(city => {
+                                                            return (
+                                                                <option key={city.id} value={city.nome}>
+                                                                    {city.nome}
+                                                                </option>
+                                                            )
+                                                        })
+                                                    }
+                                                </select>
                                             </label>
+
                                             </>
                                         )
                                     }
