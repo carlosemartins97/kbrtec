@@ -3,6 +3,8 @@ import React from 'react';
 import firstImg from '../../../../core/assets/feedback/img1.png'
 import secondImg from '../../../../core/assets/feedback/img2.png'
 import thirdImg from '../../../../core/assets/feedback/img3.png'
+import ArrowUp from '../../../../core/assets/feedback/arrow-up.svg'
+import ArrowDown from '../../../../core/assets/feedback/arrow-down.svg'
 
 import globo from '../../../../core/assets/partners/globo.png'
 import oglobo from '../../../../core/assets/partners/oglobo.png'
@@ -62,6 +64,11 @@ const FeedbackAndPartners = () => {
                         <img src={firstImg} loading="lazy" alt="vídeo 1"/>
                         <img src={secondImg} loading="lazy" alt="vídeo 2"/>
                         <img src={thirdImg} loading="lazy" alt="vídeo 3"/>
+                        <img src={thirdImg} loading="lazy" alt="vídeo 3"/>
+                        <div>
+                            <button type="button"><img src={ArrowUp} alt="Seta pra cima"/></button>
+                            <button type="button"><img src={ArrowDown} alt="Seta pra baixo"/></button>
+                        </div>
                     </VideoArea>
                     
 

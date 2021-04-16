@@ -17,6 +17,7 @@ export const Container = styled.section`
 `;
 
 export const Feedback = styled.div`
+    position: relative;
     width: 100%;
     background: #171717;
 
@@ -85,9 +86,44 @@ export const Description = styled.p`
     text-transform: uppercase;
 `;
 
-export const VideoArea = styled.div`    
+export const VideoArea = styled.div`  
+    height: 100%;
+    max-height: 630px;
+
+    overflow: hidden;
+    
     > img {
         padding: 10px 0;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        right: 0;
+        bottom: 40%;
+        >:first-child {
+            width: 60px;
+            height: 65px;
+            background: linear-gradient(210deg, ${props => props.theme.colors.gradient.secondary}, ${props => props.theme.colors.gradient.primary});
+
+            transition: filter 0.3s;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
+
+        >:last-child {
+            width: 60px;
+            height: 65px;
+            background: ${props => props.theme.colors.secondary};
+            transition: filter 0.3s;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
     }
     @media(max-width: 1465px){
             text-align:center;
