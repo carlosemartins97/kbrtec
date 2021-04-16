@@ -71,23 +71,24 @@ function Registration(){
         Aos.init({duration: 1000});
 
         try { 
-            axios.get(BASE_URL)
-                .then(response => setStateOptions(response.data.sort(
-                    function(a, b) {
-                        var textA = a.nome;
-                        var textB = b.nome;
-                        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-                    }
-                )));
+            if(statesOptions.length === 0) {
+                axios.get(BASE_URL)
+                    .then(response => setStateOptions(response.data.sort(
+                        function(a, b) {
+                            var textA = a.nome;
+                            var textB = b.nome;
+                            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                        }
+                    )));
+            }
+
+            axios.get(`${BASE_URL}${state}/municipios`)
+                .then(response => setCityOptions(response.data));
+            
         } catch {
             alert('Erro ao fazer requisição.')
         }
-    },[])
-
-    useEffect(() => {
-        axios.get(`${BASE_URL}${state}/municipios`)
-            .then(response => setCityOptions(response.data));
-    },[state])
+    },[statesOptions, state])
 
     useEffect(() => {
         if(step === 3){
@@ -249,57 +250,57 @@ function Registration(){
                                     {
                                         step === 2 && (
                                             <form onSubmit={(e) => {e.preventDefault()}}>
-                                            <div>
-                                                <IoIosArrowBack onClick={handleBack}/>
-                                                <h1>Crie sua conta</h1>
-                                            </div>
-                                            <p>
-                                            {errorCpfMsg} <br/>
-                                            {errorCityMsg} <br/>
-                                            {errorStateMsg}
-                                            </p>
-                                            <label>CPF
-                                                <MaskedInput 
-                                                    placeholder="EX: 123-456-789-10" 
-                                                    mask="999-999-999-99" 
-                                                    value={cpf} 
-                                                    onChange={(e) => setCpf(e.target.value)}
-                                                />
-                                            </label>
+                                                <div>
+                                                    <IoIosArrowBack onClick={handleBack}/>
+                                                    <h1>Crie sua conta</h1>
+                                                </div>
+                                                <p>
+                                                    {errorCpfMsg} <br/>
+                                                    {errorCityMsg} <br/>
+                                                    {errorStateMsg}
+                                                </p>
+                                                <label>CPF
+                                                    <MaskedInput 
+                                                        placeholder="EX: 123-456-789-10" 
+                                                        mask="999-999-999-99" 
+                                                        value={cpf} 
+                                                        onChange={(e) => setCpf(e.target.value)}
+                                                    />
+                                                </label>
 
-                                            <label>Estado
-                                                <select placeholder="EX: São Paulo" value={state} onChange={(e) => setState(e.target.value)}>
-                                                    <option value="#" defaultValue>Selecione um estado</option>
-                                                    {
-                                                        statesOptions.map(state => {
-                                                            return (
-                                                                <option key={state.sigla} value={state.sigla}>
-                                                                    {state.nome}
-                                                                </option>
-                                                            )
-                                                        })
-                                                    }
-                                                </select>
-                                            </label>
+                                                <label>Estado
+                                                    <select placeholder="EX: São Paulo" value={state} onChange={(e) => setState(e.target.value)}>
+                                                        <option value="#" defaultValue>Selecione um estado</option>
+                                                        {
+                                                            statesOptions.map(state => {
+                                                                return (
+                                                                    <option key={state.sigla} value={state.sigla}>
+                                                                        {state.nome}
+                                                                    </option>
+                                                                )
+                                                            })
+                                                        }
+                                                    </select>
+                                                </label>
 
-                                            <label>Cidade 
-                                                <select placeholder="EX: Santos" value={city} onChange={(e) => setCity(e.target.value)}>
-                                                    <option value="#" defaultValue>Selecione uma cidade</option>
-                                                    {
-                                                        cityOptions.map(city => {
-                                                            return (
-                                                                <option key={city.id} value={city.nome}>
-                                                                    {city.nome}
-                                                                </option>
-                                                            )
-                                                        })
-                                                    }
-                                                </select>
-                                            </label>
+                                                <label>Cidade 
+                                                    <select placeholder="EX: Santos" value={city} onChange={(e) => setCity(e.target.value)}>
+                                                        <option value="#" defaultValue>Selecione uma cidade</option>
+                                                        {
+                                                            cityOptions.map(city => {
+                                                                return (
+                                                                    <option key={city.id} value={city.nome}>
+                                                                        {city.nome}
+                                                                    </option>
+                                                                )
+                                                            })
+                                                        }
+                                                    </select>
+                                                </label>
 
-                                            <button type="button" onClick={validateSecondStepData}>
-                                                Concluir
-                                            </button>
+                                                <button type="button" onClick={validateSecondStepData}>
+                                                    Concluir
+                                                </button>
 
                                             </form>
                                         )
