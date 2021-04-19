@@ -68,7 +68,7 @@ function Registration(){
     }
 
     useEffect(() => {
-        Aos.init({duration: 1000});
+        Aos.init({duration: 1000, once: true});
 
         try { 
             if(statesOptions.length === 0) {
