@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import firstImg from '../../../../core/assets/feedback/img1.png'
 import secondImg from '../../../../core/assets/feedback/img2.png'
@@ -31,6 +31,7 @@ import {
 } from './styles';
 
 const FeedbackAndPartners = () => {
+    const [initialImage, setInitialImage] = useState(0);
 
     const allPartnersImages = [
         {name: 'globo', img: globo, delay: 600},
@@ -42,6 +43,22 @@ const FeedbackAndPartners = () => {
         {name: 'vendamais', img: vendamais, delay: 1200},
         {name: 'negocios', img: negocios, delay: 1300},
     ]
+
+
+    function prevSlide(){
+        if(initialImage === 0){
+            return;
+        } else {
+            setInitialImage(initialImage - 1);
+        }
+    }
+    function nextSlide(){
+        if(initialImage > 0) {
+            return;
+        } else {
+            setInitialImage(initialImage + 1);
+        }
+    }
 
     return (
         <Container>
@@ -60,14 +77,18 @@ const FeedbackAndPartners = () => {
                         Nemo enim ipsam voluptatem quia.
                     </Description>
 
-                    <VideoArea>
-                        <img src={firstImg} loading="lazy" alt="vídeo 1"/>
-                        <img src={secondImg} loading="lazy" alt="vídeo 2"/>
-                        <img src={thirdImg} loading="lazy" alt="vídeo 3"/>
-                        <img src={thirdImg} loading="lazy" alt="vídeo 3"/>
+                    <VideoArea initialImage={initialImage}>
                         <div>
-                            <button type="button"><img src={ArrowUp} alt="Seta pra cima"/></button>
-                            <button type="button"><img src={ArrowDown} alt="Seta pra baixo"/></button>
+                            <img src={firstImg} loading="lazy" alt="vídeo 1"/>
+                            <img src={secondImg} loading="lazy" alt="vídeo 2"/>
+                            <img src={thirdImg} loading="lazy" alt="vídeo 3"/>
+                            <img src={thirdImg} loading="lazy" alt="vídeo 4"/>
+                        </div>
+                        <div>
+                            {initialImage > 0 && (
+                                <button type="button" onClick={prevSlide}><img src={ArrowUp} alt="Seta pra cima"/></button>
+                            )}
+                            <button type="button" onClick={nextSlide}><img src={ArrowDown} alt="Seta pra baixo"/></button>
                         </div>
                     </VideoArea>
                     

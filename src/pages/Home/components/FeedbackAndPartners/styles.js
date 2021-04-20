@@ -92,10 +92,16 @@ export const VideoArea = styled.div`
 
     overflow: hidden;
     
-    > img {
+    div > img {
         padding: 10px 0;
     }
-    div {
+
+    > div {
+        transition: transform 0.5s;
+        transform: ${props => props.initialImage === 1 && 'translateY(-25%)'};
+    }
+
+    >:last-child {
         display: flex;
         flex-direction: column;
 
